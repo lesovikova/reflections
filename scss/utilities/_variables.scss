@@ -3,7 +3,13 @@ $imgFilesPath: "../img";
 $fontsPath: "../fonts/";
 
 // Colors
-
+$white: white;
+$mix-color-2: #4183d7;
 //Fonts
-
+$google-font: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,600&display=swap";
+@if variable_exists(google-font) {
+    @import url($google-font);
+  }
+$mainFont: 'Poppins', sans-serif;
 $baseFontSize: 16px;
+

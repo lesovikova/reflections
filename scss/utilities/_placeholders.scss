@@ -3,3 +3,16 @@
     width: 100%;
     height: auto;
   }
+
+  %btn-style-big {
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    font-size: rem(18px);
+    letter-spacing: rem(0.4px);
+    color: $white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 15px 5px 45px;
+    position: relative;
+  }
