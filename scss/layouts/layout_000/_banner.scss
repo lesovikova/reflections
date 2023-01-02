@@ -1,0 +1,41 @@
+.banner {
+    @include e(wrap) {
+        max-width: 100%;
+        padding: 2.5rem .5rem;
+        text-align: center;
+        &:first-of-type {
+            background: url(../../../img/banner/home-YLei.png) no-repeat;
+            background-size: cover;
+        }
+    }
+    @include e(header) {
+        font-size: rem(40px);
+        font-weight: 600;
+        line-height: rem(48px);
+        text-align: center;
+        color: $white;
+    }
+    @include e(text) {
+        font-size: rem(20px);
+        font-weight: 600;
+        line-height: rem(28px);
+        color: $white;
+        text-align: center;
+        letter-spacing: .4px;
+        margin-bottom: 20px
+    }
+    @include e(button) {
+        @extend %btn-style-big;
+        @include theming($themes);
+        position: relative;
+        line-height: rem(50px);
+        margin-top: 20px;
+        padding: 5px 50px 5px 20px;
+        &::after {
+        @include pseudo-els('\ea3c', 10%, 85%) {
+            font-family: 'icomoon';
+        }
+        }
+    }
+}
+

@@ -17,3 +17,14 @@
 	top: $top;
 	left: $left;
 }
+
+//mixin to create modifiers for different background colors
+@mixin theming($map) {
+	@each $key, $value in $map {
+		&--#{$key} {
+			background-color: $value;
+		}
+	}
+}
+
+		
