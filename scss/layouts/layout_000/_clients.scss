@@ -1,0 +1,8 @@
+.clients {
+    @include e(item) {
+        max-width: 30%;
+    }
+    @include e(logo) {
+        @extend %img-fluid;
+    }
+}

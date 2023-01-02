@@ -1,8 +1,13 @@
+
 .upper-header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: min-content;
+    justify-items: center;
     align-items: center;
+    row-gap: 15px;
+    padding: 20px 15px;
 }
 .header {
     @include e(button-support) {
@@ -14,14 +19,17 @@
     @include e(phone) {
             position: relative;
             &::before {
-                position: absolute;
                 color: $serviceClr;
-                font-family: 'icomoon';
-                content: "\e907";
                 font-size: rem(32px);
+                @include pseudo-els('\e907', rem(-16px), rem(-16px)) {
+                    font-family: 'icomoon';
+                }
                 }
         }
         
+}
+.logo {
+    @extend %img-fluid;
 }
 .menu-btn {
     position: relative;
@@ -46,6 +54,32 @@
     }
 }
 .search-form {
+    @include e(submit) {
+        display: none;
+    }
+    
+        position: relative;
+        &::after {
+            @include pseudo-els('\e901', 25%, 90%) {
+            font-family: 'icomoon';
+            font-weight: bold;
+            }
+        }
+        @include e(field) {            
+            background-color: rgba(0,0,0,.1);
+            outline: 1px solid hsla(0,0%,100%,.2);
+            border: 2px solid rgba(0,0,0,.1);
+            padding: 5px 40px 5px 15px;
+            max-width: 100%;
+            line-height: rem(28px);
+            &::placeholder {
+                font-size: rem(13px);
+                color: #88889f;
+            }
+        }
+    
+    grid-row: 2;
+    grid-column: 1/-1;
     
 }
 

@@ -1,0 +1,8 @@
+.news {
+    @include e(article) {
+        max-width: 30%;
+    }
+    @include e(image) {
+        @extend %img-fluid;
+    }
+}

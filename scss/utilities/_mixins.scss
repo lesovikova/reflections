@@ -10,4 +10,10 @@
 	}
 }
 
-
+@mixin pseudo-els($content, $top, $left) {
+	@content;
+	position: absolute;	
+	content: $content;
+	top: $top;
+	left: $left;
+}

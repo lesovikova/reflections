@@ -1,0 +1,8 @@
+.reviews {
+    display: flex;
+    flex-direction: column;
+    @include e(article) {
+        display: flex;
+        flex-direction: column;
+    }
+}

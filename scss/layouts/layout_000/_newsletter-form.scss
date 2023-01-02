@@ -1,0 +1,15 @@
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include e(item) {
+        display: flex;
+        flex-direction: column;
+    }
+    @include e(label) {
+
+    }
+    @include e(label-chbox) {
+        font-size: 10px;
+    }
+}
