@@ -1,14 +1,51 @@
+.upper-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
 .header {
     @include e(button-support) {
-        @extend %btn-style-big;
-        background-color: $mix-color-2;
-        line-height: rem(46px);
-        &::before {
-            position: absolute;
-            left: 18px;
-            font-family: 'icomoon';
-            content: "\e904";
-            font-size: rem(23px);
+        display: none
+        }
+    @include e(button-contact) {
+        display: none;
+        }
+    @include e(phone) {
+            position: relative;
+            &::before {
+                position: absolute;
+                color: $serviceClr;
+                font-family: 'icomoon';
+                content: "\e907";
+                font-size: rem(32px);
+                }
+        }
+        
+}
+.menu-btn {
+    position: relative;
+    background-color: $serviceClr;
+    padding: 5px 15px;
+    border-radius: 3px;
+    width: 33px;
+    height: 46px;
+    box-sizing: content-box;
+    @include e(burger) {
+        position: absolute;
+        top: 50%;
+        background-color: $white;
+        width: 33px;
+        height: 4px;
+        &:first-of-type {
+            top: calc(50% - 10px);
+        }
+        &:last-of-type {
+            top: calc(50% + 10px);
         }
     }
 }
+.search-form {
+    
+}
+

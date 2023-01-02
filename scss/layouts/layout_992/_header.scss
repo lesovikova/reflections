@@ -1,0 +1,26 @@
+.header {
+    @include e(button-support) {
+        @extend %btn-style-big;
+        background-color: $mix-color-2;
+        line-height: rem(46px);
+        &::before {
+            position: absolute;
+            left: 18px;
+            font-family: 'icomoon';
+            content: "\e904";
+            font-size: rem(23px);
+        }
+    }
+    @include e(button-contact) {
+        @extend %btn-style-big;
+        background-color: #999aa2;
+        line-height: rem(46px);
+        &::before {
+            position: absolute;
+            left: 18px;
+            font-family: 'icomoon';
+            content: "\e903";
+            font-size: rem(23px);
+        }
+    }
+}

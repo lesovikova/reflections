@@ -4,7 +4,11 @@ $fontsPath: "../fonts/";
 
 // Colors
 $white: white;
+$black: black;
+$serviceClr: #333645;
 $mix-color-2: #4183d7;
+$mix-color-1: #999aa2;
+
 //Fonts
 $google-font: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,600&display=swap";
 @if variable_exists(google-font) {
