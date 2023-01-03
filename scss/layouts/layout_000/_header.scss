@@ -2,7 +2,7 @@
 .upper-header {
     max-width: 100%;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr;
     grid-template-rows: min-content;
     justify-items: center;
     align-items: center;
@@ -21,7 +21,7 @@
             &::before {
                 color: $serviceClr;
                 font-size: rem(32px);
-                @include pseudo-els('\e907', rem(-16px), rem(-16px)) {
+                @include pseudo-els(rem(-16px), rem(-16px), '\e907') {
                     font-family: 'icomoon';
                 }
                 }
@@ -60,7 +60,7 @@
     
         position: relative;
         &::after {
-            @include pseudo-els('\e901', 25%, 90%) {
+            @include pseudo-els(25%, 90%, '\e901') {
             font-family: 'icomoon';
             font-weight: bold;
             }

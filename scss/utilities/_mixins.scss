@@ -10,10 +10,10 @@
 	}
 }
 
-@mixin pseudo-els($content, $top, $left) {
-	@content;
+@mixin pseudo-els($top, $left, $content:"") {
 	position: absolute;	
 	content: $content;
+	@content;
 	top: $top;
 	left: $left;
 }
@@ -23,6 +23,14 @@
 	@each $key, $value in $map {
 		&--#{$key} {
 			background-color: $value;
+		}
+	}
+}
+
+@mixin icons($map) {
+	@each $key, $value in $map {
+		&--#{$key}::before {
+			content: $value;
 		}
 	}
 }

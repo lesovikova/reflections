@@ -6,6 +6,7 @@
         &:first-of-type {
             background: url(../../../img/banner/home-YLei.png) no-repeat;
             background-size: cover;
+            background-position: center;
         }
     }
     @include e(header) {
@@ -32,7 +33,7 @@
         margin-top: 20px;
         padding: 5px 50px 5px 20px;
         &::after {
-        @include pseudo-els('\ea3c', 10%, 85%) {
+        @include pseudo-els(9%, 85%, '\ea3c') {
             font-family: 'icomoon';
         }
         }
