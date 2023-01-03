@@ -39,3 +39,11 @@
   line-height: rem(47.5px);
   margin-bottom: 10px;
 }
+
+%view-all {
+  color: $serviceClr;
+  font-size: rem(26px);
+  line-height: 1.1;
+  font-weight: 600;
+  text-transform: capitalize;
+}

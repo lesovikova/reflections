@@ -1,0 +1,10 @@
+.partners {
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: 15px;
+    overflow: scroll;
+    gap: 50px;
+    &::-webkit-scrollbar {
+        display: none;
+      }
+}
