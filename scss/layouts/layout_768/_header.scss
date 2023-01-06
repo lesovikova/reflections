@@ -1,0 +1,55 @@
+@media all and (min-width: 768px)  {
+    .header {
+        @include e(phone) {
+            display: none;
+        }
+    }
+    .upper-header {
+        @include e(division) {
+            flex-wrap: nowrap;
+        }
+    }
+    .logo {
+        max-width: 50%;
+    }
+    .search-form {
+        width: auto;
+        display: inline-block;
+        order: 1;
+        margin-left: auto;
+        margin-right: 20px;
+        &::after {
+            content: "";
+        }
+        @include e(field) {
+            width: 174px;
+            height: 56px;
+            margin: 0;
+        }
+        @include e(submit) {
+            display: initial;
+            width: 56px;
+            height: 56px;
+            background-color: $form-bgrnd;
+            border: none;
+            border-radius: 3px;
+            position: relative;
+            color: $white;
+            font-weight: bold;
+            font-size: 23px;
+            vertical-align: middle;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            margin-left: -5px;
+            margin-top: -2px;
+            &::after {
+                @include pseudo-els(50%, 31%, '\e901');
+            }
+        }
+        
+    }
+    .menu-btn {
+        order: 3;
+        flex-basis: 33px;
+    }
+}

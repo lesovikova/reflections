@@ -7,13 +7,14 @@
   %btn-style-big {
     font-weight: 400;
     text-transform: uppercase;
-    text-align: right;
+    text-align: left;
     font-size: rem(18px);
     letter-spacing: 0.4px;
+    line-height: rem(35px);
     color: $white;
     border: none;
     border-radius: 3px;
-    padding: 5px 45px 5px 15px;
+    padding: 11px 65px 11px 35px;
     position: relative;
   }
 
@@ -32,7 +33,7 @@
   }
 
 %sec-header {
-  color: $serviceClr;
+  color: $serviceCol;
   font-weight: 600;
   font-size: rem(43px);
   letter-spacing: 0.4px;
@@ -41,7 +42,7 @@
 }
 
 %view-all {
-  color: $serviceClr;
+  color: $serviceCol;
   font-size: rem(26px);
   line-height: 1.1;
   font-weight: 600;

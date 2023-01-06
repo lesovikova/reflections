@@ -5,17 +5,19 @@
 }
 
 @mixin m($modifier) {
-	&_#{$modifier} {
+	&--#{$modifier} {
 		@content;
 	}
 }
 
 @mixin pseudo-els($top, $left, $content:"") {
 	position: absolute;	
+	font-family: 'icomoon';
 	content: $content;
 	@content;
 	top: $top;
 	left: $left;
+	line-height: 0;
 }
 
 //mixin to create modifiers for different background colors
@@ -35,4 +37,10 @@
 	}
 }
 
-		
+@mixin theming-color($map) {
+	@each $key, $value in $map {
+		&--#{$key} {
+			color: $value;
+		}
+	}
+}		

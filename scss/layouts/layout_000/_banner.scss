@@ -1,7 +1,7 @@
 .banner {
     @include e(wrap) {
         max-width: 100%;
-        padding: 2.5rem .5rem;
+        padding: 5.5rem .5rem;
         text-align: center;
         &:first-of-type {
             background: url(../../../img/banner/home-YLei.png) no-repeat;
@@ -33,8 +33,7 @@
         margin-top: 20px;
         padding: 5px 50px 5px 20px;
         &::after {
-        @include pseudo-els(9%, 85%, '\ea3c') {
-            font-family: 'icomoon';
+        @include pseudo-els(49%, 80%, '\ea3c') {
         }
         }
     }

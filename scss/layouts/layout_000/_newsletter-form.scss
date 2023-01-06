@@ -2,14 +2,84 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: #ddd;    
+    color: $serviceCol;
+    padding: 50px 15px;
+    @include e(heading) {
+        font-weight: 400;
+        font-size: 2rem;
+        color: $serviceCol;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    @include e(form) {
+        
+    }
     @include e(item) {
         display: flex;
         flex-direction: column;
+        margin-bottom: 15px;
     }
     @include e(label) {
-
+        font-weight: 600;
+        margin: 10px 10px 10px 0;
+    }
+    @include e(required) {
+        color: $required;
+    }
+    @include e(input) {
+        border: 1px solid $servicesBrd;
+        padding: 10px 15px;  
+        font-size: rem(14px);
+        line-height: 1.8;
+        color: $greyish;
     }
     @include e(label-chbox) {
-        font-size: 10px;
+        display: block;
+        position: relative;
+        font-size: rem(16px);
+        font-weight: 600;
+        line-height: 2;
+        padding-left: 50px;
+        margin-bottom: 25px;
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+          
+    }
+    @include e(new-checkbox) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 32px;
+        width: 32px;
+        background-color: #ddd;
+        border: 3px solid $serviceCol;
+        border-radius: 3px;
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+    @include e(submit) {
+        @extend %btn-style-small;
+        background-color: $serviceCol;
     }
 }
+
+.newsletter__label-chbox input:checked ~ .newsletter__new-checkbox {
+    background-color: $serviceCol;
+    color: $white;
+  }
+.newsletter__label-chbox input:checked ~ .newsletter__new-checkbox:after {
+    position: absolute;
+    display: block;
+    @include pseudo-els(49%, 21%, '\e908')
+  }
+

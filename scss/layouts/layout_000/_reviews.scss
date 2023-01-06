@@ -1,8 +1,87 @@
 .reviews {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
+    background-color: $serviceCol;
+    color: $white;
+    padding: 50px 15px;
     @include e(article) {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+    }
+    @include e(heading) {
+        font-size: 2.25rem;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }
+    @include e(paragraph) {
+        line-height: rem(30px);
+        font-size: rem(16px);
+        margin-top: 25px;
+        &:first-of-type {
+            font-weight: 600;
+        }
+    }
+    @include e(button) {
+        color: $white;
+        @extend %btn-style-big;
+        font-size: rem(20px);
+        margin-top: 20px;
+        &::after {
+            line-height: 0;
+            @include pseudo-els(49%, 75%, '\ea3c'){
+                font-family: 'icomoon';
+            }
+        }
+        @include m(read-more) {
+        background-color: $darkBtn;
+        margin-bottom: 50px;
+        }
+        @include m(google-reviews) {
+            background-color: $blue;
+            margin-right: 10px;
+            &::after {
+                left: 80%;
+            }
+        }
+        @include m(trustpilot-reviews) {
+            background-color: $green;
+            padding: 11px 49px 11px 35px;
+            &::after {
+                left: 86%;
+            }
+        }
+    }
+    @include e(stars) {
+        position: relative;
+        padding: 25px;
+        &::after {
+            @include pseudo-els(0, 0, '\f005 \f005 \f005 \f005 \f005'){
+                font-family: 'icomoon';
+                color: $stars;
+                font-size: rem(50px);
+                z-index: 10;
+                letter-spacing: 5px;
+            }
+        }
+    }
+    @include e(text) {
+
+    }
+    @include e(quote) {
+        font-style: italic;
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        font-weight: 600;
+        line-height: rem(30px);
+    }
+    @include e(quote-cite) {
+        color: $quote-cite;
+        font-size: rem(17.6px);
+        margin-bottom: 25px;
+        font-weight: 600;
+        line-height: rem(30px);
+        @include m(signiture) {
+            color: $white;
+        }
     }
 }

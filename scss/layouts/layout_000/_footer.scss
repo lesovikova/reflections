@@ -1,0 +1,86 @@
+.footer {
+    background-color: $serviceCol;
+    color: $white;
+    padding: 25px 0;
+    @include e(top) {
+        margin: 0 45px;
+    }
+    @include e(bottom) {
+        border-top: 1px solid $servicesBrd;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        gap: 5px;
+        font-size: rem(13px);
+    }
+    @include e(copy) {
+        flex-basis: 30%;
+        line-height: 18.5px;
+        &:last-of-type {
+            text-align: center;
+            margin-right: auto;
+        }
+    }
+}
+.footer-menu {
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-content: center;
+    align-items: stretch;
+    flex-direction: row;
+   
+    @include e(item) {
+        font-size: rem(13px);
+        line-height: rem(22px);
+        & a[href^="tel"] {
+            display: block;
+            padding-top: 20px;
+        }
+        &:first-of-type {
+            margin-top: 25px;
+        }
+    }
+    @include e(sub){
+        &:last-of-type {
+            margin-bottom: 25px;
+        }
+    }
+}
+.social {
+    display: flex;
+    margin-left: auto;
+    @include e(logo) {
+        max-height: 38px;
+        padding: 5px;
+        margin: 0 10px;
+        @include m(facebook) {
+            position: relative;
+            &::before {
+            @include pseudo-els(49%, 0, '\ea90');
+            }
+        }
+        @include m(twitter) {
+            position: relative;
+            &::before {
+            @include pseudo-els(49%, 0, '\ea96');
+            }
+        }
+        @include m(inst) {
+            position: relative;
+            &::before {
+            @include pseudo-els(49%, 0, '\ea92');
+            }
+        }
+        @include m(linkedin) {
+            position: relative;
+            margin-right: 0;
+            &::before {
+            @include pseudo-els(49%, 0, '\eaca');
+            }
+        }
+    }
+}

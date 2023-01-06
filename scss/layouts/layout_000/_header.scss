@@ -1,13 +1,17 @@
 
 .upper-header {
     max-width: 100%;
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    grid-template-rows: min-content;
     justify-items: center;
     align-items: center;
     row-gap: 15px;
     padding: 20px 15px;
+    @include e(division) {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 .header {
     @include e(button-support) {
@@ -18,22 +22,31 @@
         }
     @include e(phone) {
             position: relative;
+            margin-left: auto;
             &::before {
-                color: $serviceClr;
+                color: $serviceCol;
                 font-size: rem(32px);
-                @include pseudo-els(rem(-16px), rem(-16px), '\e907') {
-                    font-family: 'icomoon';
-                }
+                @include pseudo-els(49%, -3rem, '\e907'); 
+                                     
                 }
         }
         
 }
 .logo {
     @extend %img-fluid;
+    flex-shrink: 1;
+    width: calc(100vw - 160px);
+    max-width: 80%;
+    // min-width: 200px;
+    // max-width: 80%;
+    img {
+        @extend %img-fluid;
+    }
 }
 .menu-btn {
+    flex-shrink: 0;
     position: relative;
-    background-color: $serviceClr;
+    background-color: $serviceCol;
     padding: 5px 15px;
     border-radius: 3px;
     width: 33px;
@@ -54,32 +67,39 @@
     }
 }
 .search-form {
+    order: 10;
+    width: calc(100vw - 30px);
     @include e(submit) {
         display: none;
     }
     
         position: relative;
         &::after {
-            @include pseudo-els(25%, 90%, '\e901') {
-            font-family: 'icomoon';
+            // @include pseudo-els(49%, 90%, '\e901') {
+            color: $serviceCol;
             font-weight: bold;
+            font-size: 21px;
+            position: absolute;	
+            font-family: 'icomoon';
+            content: '\e901';
+            top: 63%;
+            right: 3%;
+            line-height: 0;
             }
-        }
-        @include e(field) {            
+        
+        @include e(field) {    
+            width: calc(100vw - 30px);   
+            max-width: 100%;     
             background-color: rgba(0,0,0,.1);
             outline: 1px solid hsla(0,0%,100%,.2);
             border: 2px solid rgba(0,0,0,.1);
-            padding: 5px 40px 5px 15px;
-            max-width: 100%;
+            padding: 7px 40px 7px 15px;
             line-height: rem(28px);
+            margin-top: 20px;
             &::placeholder {
                 font-size: rem(13px);
                 color: #88889f;
             }
         }
-    
-    grid-row: 2;
-    grid-column: 1/-1;
-    
 }
 
