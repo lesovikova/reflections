@@ -1,0 +1,32 @@
+@media all and (min-width: 768px) {
+    .footer-menu {
+        @include e(sub) {
+            &:first-of-type {
+                flex-basis: 35%;
+            }
+            &:nth-of-type(2) {
+                flex-basis: 35%;
+            }
+            &:nth-of-type(3) {
+                flex-basis: 28%;
+            }
+            &:nth-of-type(4) {
+                flex-basis: 28%;
+            }
+            &:last-of-type {
+                flex-basis: 28%;
+                margin: 0;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    .footer {
+        @include e(copy) {
+            flex-basis: 55%;
+            &:last-of-type {
+                flex-basis: 20%;
+                text-align: left;
+            }
+        }
+    }
+}

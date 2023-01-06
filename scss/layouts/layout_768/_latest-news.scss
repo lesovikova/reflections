@@ -1,0 +1,23 @@
+@media all and (min-width: 768px) {
+    .news {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        align-items: center;
+        padding: 50px 25px 50px;
+        column-gap: 30px;
+        row-gap: 30px;
+        max-width: 740px;
+        margin: auto;
+    @include e(article) {
+        margin: 0;
+        max-width: 100%;
+        &:last-of-type {
+            display: none;
+        }
+    }
+    @include e(header) {
+        margin: 0;
+    }
+    }
+}

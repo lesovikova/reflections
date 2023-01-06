@@ -11,7 +11,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto repeat(5, auto);
         column-gap: 30px;
-        padding: 50px 25px 0 25px;
+        padding: 50px 25px 50px 25px;
         @include e(item) {
             &:first-of-type {
                 grid-column: 1 / 3;

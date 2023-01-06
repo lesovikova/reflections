@@ -11,8 +11,7 @@
     @include e(article) {
         max-width: 90%;
         margin: 0 auto;
-        border: 1px solid $servicesBrd;
-        box-shadow: 0 3px 35px rgba(0,0,0,.1);
+        @extend %articles-box;
         margin-top: 30px;
         position: relative;
     }

@@ -2,8 +2,11 @@
     background-color: $serviceCol;
     color: $white;
     padding: 25px 0;
+    @include e(wrapper) {
+        max-width: 700px;
+        margin: auto;
+    }
     @include e(top) {
-        margin: 0 45px;
     }
     @include e(bottom) {
         border-top: 1px solid $servicesBrd;
@@ -32,6 +35,7 @@
     align-content: center;
     align-items: stretch;
     flex-direction: row;
+    justify-content: center;
    
     @include e(item) {
         font-size: rem(13px);
@@ -45,7 +49,9 @@
         }
     }
     @include e(sub){
+        flex-basis: 45%;
         &:last-of-type {
+            margin: 0 auto;
             margin-bottom: 25px;
         }
     }

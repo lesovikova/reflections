@@ -7,6 +7,8 @@
     .upper-header {
         @include e(division) {
             flex-wrap: nowrap;
+            max-width: 740px;
+            margin: auto;
         }
     }
     .logo {

@@ -1,0 +1,8 @@
+@media all and (min-width: 768px) {
+    .reviews {
+        @include e(wrapper) {
+            max-width: 740px;
+            margin: auto;
+        } 
+    }
+}
