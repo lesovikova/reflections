@@ -1,0 +1,13 @@
+@media all and (min-width: 992px) {
+    .reviews {
+        @include e(wrapper) {
+            max-width: 940px;
+            margin: auto;
+            display: flex;
+            gap: 22px;
+        } 
+        @include e(article) {
+            flex-basis: 49%;
+        }
+    }
+}

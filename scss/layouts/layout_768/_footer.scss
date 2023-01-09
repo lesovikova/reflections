@@ -22,7 +22,7 @@
     }
     .footer {
         @include e(copy) {
-            flex-basis: 55%;
+            flex-basis: 50%;
             &:last-of-type {
                 flex-basis: 20%;
                 text-align: left;

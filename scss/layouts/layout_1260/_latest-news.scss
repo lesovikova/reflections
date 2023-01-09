@@ -1,0 +1,16 @@
+@media all and (min-width: 1260px) {
+    .news {
+        max-width: 1170px;        
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        @include e(article) {
+            grid-row: 2;
+            &:last-of-type {
+                display: initial;
+            }
+        }
+    }
+    .news .view-all {
+        grid-column: 3;
+    }
+}

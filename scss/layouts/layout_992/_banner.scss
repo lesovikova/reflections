@@ -1,0 +1,25 @@
+@media all and (min-width: 992px) {
+    .banner {
+        @include e(wrap) {
+        text-align: left;
+        padding-left: 26px;
+        }
+        @include e(wrapper) {
+        max-width: 940px;
+        margin: auto;
+        }
+        @include e(text) {
+            text-align: left;
+            font-size: rem(26px);
+            line-height: rem(40px);
+        }
+        @include e(header) {
+            font-size: rem(64px);
+            line-height: rem(80px);
+            text-align: left;
+        }
+        @include e(button) {
+            font-size: rem(20px);
+        }
+    }
+}

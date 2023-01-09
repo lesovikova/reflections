@@ -36,6 +36,13 @@
 		}
 	}
 }
+@mixin font-color($map) {
+	@each $key, $value in $map {
+		&--#{$key}::before {
+			color: $value;
+		}
+	}
+}
 
 @mixin theming-color($map) {
 	@each $key, $value in $map {

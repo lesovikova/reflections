@@ -1,0 +1,26 @@
+@media all and (min-width: 1260px) {
+    .services-list {
+        max-width: 1170px;
+    }
+    .upper-header {
+        @include e(division) {
+            max-width: 1170px;
+        }
+    }
+    .search-form {
+        margin-left: 0;
+    @include e(field) {
+        display: initial;
+    }
+    @include e(submit) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    @include e(field) {
+        border-right: none;
+    }
+}
+.logo {
+    max-width: 33%;
+}
+}

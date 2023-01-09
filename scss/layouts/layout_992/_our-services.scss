@@ -1,0 +1,46 @@
+@media all and (min-width: 992px) {
+    .services-sec .view-all {
+        grid-area: view;
+    }
+
+    .services-sec {
+        margin: auto;
+        max-width: 970px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "header header header view view view"
+        "first first second second third third"
+        "fourth fourth fourth fifth fifth fifth"
+        "sixth sixth sixth seventh seventh seventh";
+        column-gap: 30px;
+        padding: 50px 25px 50px 25px;
+        @include e(item) {
+            &:first-of-type {
+                grid-area: first;
+            }
+            &:nth-of-type(2) {
+                grid-area: second;
+            }
+            &:nth-of-type(3) {
+                grid-area: third;
+            }
+            &:nth-of-type(4) {
+                grid-area: fourth;
+            }
+            &:nth-of-type(5) {
+                grid-area: fifth;
+            }
+            &:nth-of-type(6) {
+                grid-area: sixth;
+            }
+            &:last-of-type {
+                grid-area: seventh;
+            }
+        }
+        @include e(header) {
+            align-self: center;
+            grid-area: header;
+        }
+    }
+}

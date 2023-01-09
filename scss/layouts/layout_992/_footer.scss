@@ -1,0 +1,7 @@
+@media all and (min-width: 992px) {
+    .footer {
+        @include e(wrapper) {
+            max-width: 940px;
+        }
+    }
+}

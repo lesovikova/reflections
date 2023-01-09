@@ -1,0 +1,16 @@
+@media all and (min-width: 992px) {
+    .newsletter {
+        @include e(wrapper) {
+            max-width: 940px;
+            margin: auto;
+        }
+        @include e(form) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @include e(item) {
+            flex-basis: 48%;
+        }
+    }
+}

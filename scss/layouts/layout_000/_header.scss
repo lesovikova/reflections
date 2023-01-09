@@ -14,11 +14,36 @@
     }
 }
 .header {
+   
     @include e(button-support) {
-        display: none
+        display: none;
+        @extend %btn-style-big;
+            background-color: $blue;
+            line-height: rem(46px);
+            &::before {
+                position: absolute;
+                left: 18px;
+                font-family: 'icomoon';
+                content: "\e904";
+                font-size: rem(23px);
+            }
         }
     @include e(button-contact) {
         display: none;
+        @extend %btn-style-big;
+            background-color: $form-bgrnd;
+            line-height: rem(46px);
+            &::before {
+                position: absolute;
+                left: 18px;
+                font-family: 'icomoon';
+                content: "\e903";
+                font-size: rem(23px);
+            }
+        }
+        @include e(button) {
+            margin-right: 20px;
+            padding: 5px 20px 5px 45px;
         }
     @include e(phone) {
             position: relative;

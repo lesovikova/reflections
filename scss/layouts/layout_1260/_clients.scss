@@ -1,0 +1,8 @@
+@media all and (min-width: 1260px) {
+    .clients {
+        @include e(wrapper) {
+            max-width: 1170px;
+            justify-content: space-evenly;
+        }
+    }
+}
