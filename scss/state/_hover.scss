@@ -1,0 +1,115 @@
+@media all and (min-width: 992px) {
+    a {
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    .newsletter {
+        @include e(submit) {
+            &:hover {
+                background-color: #22242e;
+                cursor: pointer;
+            }
+        }
+    }
+    .clients__item:hover .clients__logo {
+        display: none;
+    }
+    .clients__item:hover .clients__logo--active {
+        display: initial;
+    }
+    .news__article {
+        &:hover {
+            cursor: pointer;      
+            transform: translateY(-10px);
+            transition: 0.5s ease;
+        }
+    }
+    .reviews__button--read-more {
+        &:hover {
+            background-color:#121318;
+            cursor: pointer;
+        }
+    }
+    .reviews__button--google-reviews {
+        &:hover {
+            background-color: #166af4;
+            cursor: pointer;
+        }
+    }
+    .reviews__button--trustpilot-reviews {
+        &:hover {
+            cursor: pointer;
+            background-color: #009b69;
+        }
+    }
+    .partners__item:hover .partners__logo--inactive {
+        display: none;
+    }
+    .partners__item:hover .partners__logo--active {
+        display: initial;
+    }
+    
+    .services-sec__item {
+        @include theming-hover($themes);
+        &:hover .services-sec__button {
+            background-color: $white;
+            @include universal('color', $themes);
+        }
+        &:hover .services-sec__text {
+            color: $white;
+        }
+        &:hover .services-sec__heading {
+            color: $white;
+        }
+        &:hover .services-sec__icon {
+            background-color: $white;
+            @include font-color($themes);
+        }
+    }
+    .services-sec__item:hover {
+        transform: translateY(-10px);
+        transition: .5s ease;
+    }
+    .banner__button:hover {
+        cursor: pointer;
+        background-color: #7e57a0;
+    }
+    .logo:hover {
+        cursor: pointer;
+    }
+    .header__button-support:hover {
+        cursor: pointer;
+        background-color: #2a6ec6;
+    }
+    .header__button-contact:hover {
+        background-color: #84858f;
+        cursor: pointer;
+    }
+
+    //Styling the services menu in header
+    .services-list__submenu:hover {
+        position: relative;
+        background-color: #67809f;
+        color: $white;
+        &::before {
+            color: $white;
+        }
+        & a:hover {
+            text-decoration: none;
+        }
+        &::after {
+            @include pseudo-els(100%, 0) {
+                border: 35px solid transparent;
+                border-width: 35px 83.5px 0;
+                border-top: 35px solid ;
+            }
+        } 
+         
+    }
+.services-list__submenu {
+    @include universal-hover('border-top-color', $themes); 
+}
+    
+}

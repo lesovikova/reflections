@@ -2,4 +2,9 @@
     @include e(logo) {
         @extend %img-fluid;
     }
+    @include e(logo) {
+        @include m(active) {
+        display: none;
+        }
+    }
 }

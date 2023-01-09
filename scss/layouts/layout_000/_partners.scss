@@ -7,4 +7,9 @@
     &::-webkit-scrollbar {
         display: none;
       }
+      @include e(logo) {
+        @include m(active) {
+          display: none;
+        }
+      }
 }

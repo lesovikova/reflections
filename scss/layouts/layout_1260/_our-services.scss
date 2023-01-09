@@ -6,7 +6,7 @@
     .services-sec {
         max-width: 1170px;
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: auto, repeat(2, 1fr);
+        grid-template-rows: auto repeat(2, 1fr);
         // grid-template-areas: 
         // "header header header view view view"
         // "first first second second third third"

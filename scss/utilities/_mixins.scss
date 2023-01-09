@@ -29,6 +29,14 @@
 	}
 }
 
+@mixin theming-hover($map) {
+	@each $key, $value in $map {
+		&--#{$key}:hover {
+			background-color: $value;
+		}
+	}
+}
+
 @mixin icons($map) {
 	@each $key, $value in $map {
 		&--#{$key}::before {
@@ -51,3 +59,18 @@
 		}
 	}
 }		
+
+@mixin universal($what, $map) {
+	@each $key, $value in $map {
+		&--#{$key} {
+			#{$what}: $value;
+		}
+	}
+}
+@mixin universal-hover($what, $map) {
+	@each $key, $value in $map {
+		&--#{$key}:hover::after {
+			#{$what}: $value;
+		}
+	}
+}

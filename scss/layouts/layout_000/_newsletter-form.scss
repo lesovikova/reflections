@@ -68,6 +68,9 @@
             position: absolute;
             display: none;
         }
+        + a {
+            text-decoration: underline;
+        }
     }
     @include e(submit) {
         @extend %btn-style-small;

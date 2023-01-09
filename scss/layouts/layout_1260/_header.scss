@@ -23,4 +23,16 @@
 .logo {
     max-width: 33%;
 }
+.services-list {
+    @include e(submenu) {
+        &::before {
+            left: 43%;
+        }
+        @include m(design) {
+            &::before {
+                left: 41%;
+            }
+    }
+}
+}
 }
