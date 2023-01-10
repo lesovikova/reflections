@@ -60,7 +60,7 @@
         padding: 25px;
         margin-top: 60px;
         &::after {
-            @include pseudo-els(0, 0, '\f005 \f005 \f005 \f005 \f005'){
+            @include pseudo-els(0, 0, '\f006 \f006 \f006 \f006 \f006'){
                 font-family: 'icomoon';
                 color: $stars;
                 font-size: rem(50px);

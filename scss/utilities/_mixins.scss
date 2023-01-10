@@ -69,7 +69,7 @@
 }
 @mixin universal-hover($what, $map) {
 	@each $key, $value in $map {
-		&--#{$key}:hover::after {
+		&--#{$key}::after {
 			#{$what}: $value;
 		}
 	}

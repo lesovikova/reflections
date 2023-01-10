@@ -39,25 +39,45 @@
     }
     .services-nav {
         background-color: $serviceCol;
+        position: relative;
     }
     .services-list {
         max-width: 940px;
         margin: auto;
         display: flex;
+        @include e(link-heading) {
+            &::before {
+                @include pseudo-els(-20px, 43%) {
+                    font-size: rem(24px)
+                }
+                }
+                @include icons($icons);
+                @include font-color($themes);
+        }
         @include e(under-list) {
+            position: absolute;
+            top: 99px;
+            display: flex;
+            @include universal('background-color', $colors-hover);
+            width: 100vw;
+            left: 0;
+            color: $white;
             display: none;
+
+        }
+        @include e(header) {
+            font-size: rem(32px);
+            width: 100%;
+        }
+        @include e(item) {
+            position: relative;
+        }
+        @include e(link) {
+            font-size: rem(19px);
         }
         @include e(submenu) {
-            position: relative;
             flex: 1;
             font-weight: 400;
-            &::before {
-            @include pseudo-els(30%, 40%) {
-                font-size: rem(23px)
-            }
-            }
-            @include icons($icons);
-            @include font-color($themes);
             padding: 50px 0 20px;
             color: $white;
             @include m(design) {
@@ -80,5 +100,203 @@
             }
         }
     }
+    .service-list {
+        @include e(item) {
+            position: relative;
+            width: 30%;
+        }
+        @include e(link) {
+            font-size: rem(19px);
+        }
+    }
+
+        //styling the icons
+.services-list__under-list--software li:nth-of-type(2)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f085';
+}
+.services-list__under-list--software li:nth-of-type(3)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e958';
+}
+.services-list__under-list--software li:nth-of-type(4)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e95e';
+}
+.services-list__under-list--software li:nth-of-type(5)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0c2';
+}
+.services-list__under-list--software li:nth-of-type(6)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0b1';
+}
+.services-list__under-list--software li:nth-of-type(7)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e909';
+}
+.services-list__under-list--software li:nth-of-type(8)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0c0';
+}
+.services-list__under-list--software li:nth-of-type(9)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0ed';
+}
+.services-list__under-list--software li:nth-of-type(10)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e90c';
+}
+.services-list__under-list--software li:nth-of-type(11)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e90d';
+}
+.services-list__under-list--software li:nth-of-type(12)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e912';
+}
+.services-list__under-list--software li:nth-of-type(13)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0ac';
+}
+.services-list__submenu--it li:nth-of-type(2)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e90b';
+}
+.services-list__submenu--it li:nth-of-type(3)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e906';
+}
+.services-list__submenu--it li:nth-of-type(4)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0b1';
+}
+.services-list__submenu--it li:nth-of-type(5)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0c2';
+}
+.services-list__submenu--it li:nth-of-type(6)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e912';
+}
+.services-list__submenu--it li:nth-of-type(7)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e963';
+}
+.services-list__submenu--marketing li:nth-of-type(2)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f002';
+}
+.services-list__submenu--marketing li:nth-of-type(3)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0e0';
+}
+.services-list__submenu--marketing li:nth-of-type(4)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0d6';
+}
+.services-list__submenu--marketing li:nth-of-type(5)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0c0';
+}
+.services-list__submenu--marketing li:nth-of-type(6)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e90f';
+}
+.services-list__submenu--marketing li:nth-of-type(7)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f040';
+}
+.services-list__submenu--telecoms li:nth-of-type(2)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e939';
+}
+.services-list__submenu--telecoms li:nth-of-type(3)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e910';
+}
+.services-list__submenu--telecoms li:nth-of-type(4)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f095';
+}
+.services-list__submenu--telecoms li:nth-of-type(5)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f2b5';
+}
+.services-list__submenu--telecoms li:nth-of-type(6)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f098';
+}
+.services-list__submenu--telecoms li:nth-of-type(7)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e907';
+}
+.services-list__submenu--design li:nth-of-type(2)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f040';
+}
+.services-list__submenu--design li:nth-of-type(3)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e902';
+}
+.services-list__submenu--design li:nth-of-type(4)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f0d6';
+}
+.services-list__submenu--design li:nth-of-type(5)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e958';
+}
+.services-list__submenu--design li:nth-of-type(6)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e956';
+}
+.services-list__submenu--design li:nth-of-type(7)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e90a';
+}
+.services-list__submenu--secutiry li:nth-of-type(2)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e909';
+}
+.services-list__submenu--secutiry li:nth-of-type(3)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e906';
+}
+.services-list__submenu--secutiry li:nth-of-type(4)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e939';
+}
+.services-list__submenu--secutiry li:nth-of-type(5)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e905';
+}
+.services-list__submenu--secutiry li:nth-of-type(6)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e904';
+}
+.services-list__submenu--secutiry li:nth-of-type(7)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f085';
+}
+.services-list__submenu--training li:nth-of-type(2)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e912';
+}
+.services-list__submenu--training li:nth-of-type(3)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\f2b5';
+}
+.services-list__submenu--training li:nth-of-type(4)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\ea80';
+}
+.services-list__submenu--training li:nth-of-type(5)::after {
+    @include pseudo-els(49%, -30px);
+    content: '\e90e';
+}
+
 
 }
+
+

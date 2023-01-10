@@ -90,8 +90,6 @@
 
     //Styling the services menu in header
     .services-list__submenu:hover {
-        position: relative;
-        background-color: #67809f;
         color: $white;
         &::before {
             color: $white;
@@ -99,17 +97,37 @@
         & a:hover {
             text-decoration: none;
         }
-        &::after {
-            @include pseudo-els(100%, 0) {
-                border: 35px solid transparent;
-                border-width: 35px 83.5px 0;
-                border-top: 35px solid ;
-            }
-        } 
-         
+    }
+    .services-list__link-heading {
+        position: relative;
+    }
+
+    .services-list__submenu:hover .services-list__link-heading::before {
+        color: $white;
+    }
+    .services-list__submenu:hover .services-list__link-heading::after {
+        @include pseudo-els(49px, 0) {
+            border: 35px solid transparent;
+            border-width: 35px 83.5px 0;
+            border-top: 35px solid ;
+            z-index: 100;
+        }
+    } 
+    .services-list__submenu:hover .services-list__link-heading  { 
+        @include universal-hover('border-top-color', $themes);        
     }
 .services-list__submenu {
-    @include universal-hover('border-top-color', $themes); 
+    @include theming-hover($themes);
 }
-    
+.services-list__submenu:hover .services-list__under-list{    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+    padding: 40px;
+    gap: 20px;
+    box-sizing: content-box;
+    line-height: 36px;
+    padding: 50px 120px;
+}
 }
