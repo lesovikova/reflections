@@ -131,4 +131,52 @@
     line-height: 36px;
     padding: 50px 120px;
 }
+.social__item:hover .social__logo--facebook::before{
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    max-height: 38px;
+    background-color: #3b5998;
+    top: calc(49% - 10px);
+    left: -10px;
+}
+.social__item:hover .social__logo--twitter::before {
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    max-height: 38px;
+    background-color: #00aced;
+    top: calc(49% - 10px);
+    left: -10px;
+}
+.social__item:hover .social__logo--inst::before {
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    max-height: 38px;
+    background-color: #d93175;
+    top: calc(49% - 10px);
+    left: -10px;
+}
+.social__item:hover .social__logo--linkedin::before {
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 50%;
+    max-height: 38px;
+    background-color: #0077b5;
+    top: calc(49% - 10px);
+    left: -10px;
+}
 }

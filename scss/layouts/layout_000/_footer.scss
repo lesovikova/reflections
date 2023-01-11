@@ -59,6 +59,9 @@
 .social {
     display: flex;
     margin-left: auto;
+    @include e(item) {
+        margin: 0 5px;
+    }
     @include e(logo) {
         max-height: 38px;
         padding: 5px;
@@ -67,18 +70,21 @@
             position: relative;
             &::before {
             @include pseudo-els(49%, 0, '\ea90');
+            line-height: 1;
             }
         }
         @include m(twitter) {
             position: relative;
             &::before {
             @include pseudo-els(49%, 0, '\ea96');
+            line-height: 1;
             }
         }
         @include m(inst) {
             position: relative;
             &::before {
             @include pseudo-els(49%, 0, '\ea92');
+            line-height: 1;
             }
         }
         @include m(linkedin) {
@@ -86,7 +92,10 @@
             margin-right: 0;
             &::before {
             @include pseudo-els(49%, 0, '\eaca');
+            
+        line-height: 1;
             }
         }
+        line-height: 1;
     }
 }

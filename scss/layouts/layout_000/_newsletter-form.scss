@@ -36,6 +36,7 @@
         font-size: rem(14px);
         line-height: 1.8;
         color: $greyish;
+        background-color: $white;
     }
     @include e(label-chbox) {
         display: block;
@@ -74,7 +75,7 @@
     }
     @include e(submit) {
         @extend %btn-style-small;
-        background-color: $serviceCol;
+        background-color: $serviceCol !important;
     }
 }
 
