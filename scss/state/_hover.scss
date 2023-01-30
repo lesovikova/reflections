@@ -120,12 +120,13 @@
 .services-list__submenu {
     @include theming-hover($themes);
 }
-.services-list__submenu:hover .services-list__under-list{    
+.services-list__submenu:hover .services-list__under-list{   
+    margin: 0 auto;
+    max-width: 1170px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     text-align: left;
-    padding: 40px;
     gap: 20px;
     box-sizing: content-box;
     line-height: 36px;

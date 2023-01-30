@@ -27,6 +27,7 @@
             width: 174px;
             height: 56px;
             margin: 0;
+            background-color: $white;
         }
         @include e(submit) {
             display: initial;

@@ -60,13 +60,20 @@
 	}
 }		
 
-@mixin universal($what, $map) {
-	@each $key, $value in $map {
-		&--#{$key} {
-			#{$what}: $value;
-		}
-	}
-}
+
+
+
+				@mixin universal($what, $map) {
+					@each $key, $value in $map {
+						&--#{$key} {
+							#{$what}: $value;
+						}
+					}
+				}
+
+
+
+
 @mixin universal-hover($what, $map) {
 	@each $key, $value in $map {
 		&--#{$key}::after {

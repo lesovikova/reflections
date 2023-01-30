@@ -11,6 +11,7 @@
         margin-left: 0;
     @include e(field) {
         display: initial;
+        width: 240px;
     }
     @include e(submit) {
         border-top-left-radius: 0;
@@ -32,6 +33,11 @@
             &::before {
                 left: 41%;
             }
+    }
+}
+@include e(link-heading) {
+    &::before {
+        left: 71px;
     }
 }
 }
