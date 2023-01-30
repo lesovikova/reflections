@@ -180,4 +180,7 @@
     top: calc(49% - 10px);
     left: -10px;
 }
+.clients__item:hover .clients__hover{
+display: block;
+}
 }

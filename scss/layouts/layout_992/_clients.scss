@@ -3,5 +3,45 @@
         @include e(wrapper) {
             max-width: 940px;
         }
+        @include e(item) {
+            position: relative;
+            text-align: center;
+        }
+        @include e(hover) {
+            position: absolute;
+            bottom: calc(100% + 50px);
+            left: calc(50% - 130px);
+            background-color: $serviceCol;
+            color: $white;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+            box-sizing: content-box;
+            margin: auto;
+            &::after {
+                position: absolute;
+                content: "";
+                top: 100%;
+                left: calc(50% - 35px);
+                
+                border-color: $serviceCol transparent transparent;
+                border-style: solid;
+                border-width: 35px 36px 0;
+            }
+        }
+        @include e(heading) {
+            font-size: rem(18px);
+            line-height: rem(20px);
+        }
+        @include e(text) {
+            font-size: rem(13px);
+            line-height: rem(22px);
+        }
+        @include e(line) {
+            background-color: $white;
+            margin: 17px auto;
+            height: 3px;
+            width: 28px;
+        }
     }
 }
