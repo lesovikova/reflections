@@ -49,7 +49,7 @@
         }
     }
     @include e(sub){
-        flex-basis: 45%;
+        width: 225px;
         &:last-of-type {
             margin: 0 auto;
             margin-bottom: 25px;

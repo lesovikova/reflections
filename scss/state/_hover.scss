@@ -183,4 +183,7 @@
 .clients__item:hover .clients__hover{
 display: block;
 }
+.newsletter__label-chbox:hover, .newsletter__checkbox:hover, .newsletter__submit:hover {
+cursor: pointer;
+}
 }
