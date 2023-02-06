@@ -8,7 +8,8 @@
     .newsletter {
         @include e(submit) {
             &:hover {
-                background-color: #22242e;
+                border-color: #191a22;
+                background-color: #22242e !important;
                 cursor: pointer;
             }
         }
@@ -70,7 +71,6 @@
     }
     .services-sec__item:hover {
         transform: translateY(-10px);
-        transition: .5s ease;
         cursor: pointer;
     }
     .banner__button:hover {
@@ -88,6 +88,7 @@
         background-color: #84858f;
         cursor: pointer;
     }
+   
 
     //Styling the services menu in header
     .services-list__submenu:hover {
@@ -189,5 +190,15 @@ cursor: pointer;
     .services-list__submenu:hover .services-list__link-heading::after {
         border-width: 35px 83.5px 0;
 
+    }
+}
+@media all and(min-width:768px) {
+    .search-form {
+        @include e(submit) {
+            &:hover {
+                cursor: pointer;
+                background-color: #7e808a;
+            }
+        }
     }
 }

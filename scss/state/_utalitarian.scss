@@ -1,6 +1,8 @@
 .is-hidden {
     display: none;
 }
+
+
 .slick-dots {
     bottom: 25px;
 }
@@ -42,3 +44,30 @@ li.slick-active button{
     top: -6px;
     left: -6px;
 }
+
+.banner-slick {
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+.banner-dots {
+    width: 100%;
+    margin: 0 auto;
+    // height: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+}
+// .banner-dots li {
+//     content: "";
+//     position: relative;
+//     display: inline-block;
+//     height: 11px;
+//     width: 11px;
+//     margin: 0 10px;
+//     padding: 0;
+//     cursor: pointer;
+//     border-radius: 50%;
+//     background-color: rgba(255, 255, 255, 0.5);
+
+// }

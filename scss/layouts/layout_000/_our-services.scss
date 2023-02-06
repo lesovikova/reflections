@@ -16,6 +16,8 @@
         border-radius: 15px;
         @extend %articles-box;
         margin-top: 30px;
+        
+        transition: .5s ease;
     }
     @include e(icon) {
         position: relative;

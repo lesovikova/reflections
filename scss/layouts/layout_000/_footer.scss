@@ -2,6 +2,11 @@
     background-color: $serviceCol;
     color: $white;
     padding: 25px 0;
+    @include e(combination) {
+        display: flex;
+        width: 60%;
+
+    }
     @include e(wrapper) {
         max-width: 740px;
         margin: auto;
@@ -19,10 +24,9 @@
         font-size: rem(13px);
     }
     @include e(copy) {
-        flex-basis: 30%;
+        flex: 1;
         line-height: 18.5px;
         &:last-of-type {
-            text-align: center;
             margin-right: auto;
         }
     }

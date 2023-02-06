@@ -77,7 +77,8 @@
             &::before {
                 @include pseudo-els(-7px, 54px) {
                     font-size: rem(24px);
-                    margin-top: -10px;
+                    margin-top: -12px;
+                    font-weight: 600;
         
                 }
                 }
@@ -94,6 +95,7 @@
         @include e(header) {
             font-size: rem(32px);
             width: 100%;
+            display: block;
         }
         @include e(item) {
             position: relative;
@@ -129,8 +131,11 @@
     .service-list {
         @include e(item) {
             position: relative;
-            width: 30%;
+            width: 26%;
             border: none;
+            &:not(:first-of-type) {
+                margin-left: 30px;
+            }
         }
         @include e(link) {
             font-size: rem(19px);
@@ -285,27 +290,27 @@
     @include pseudo-els(49%, -30px);
     content: '\e90a';
 }
-.services-list__submenu--secutiry li:nth-of-type(2)::after {
+.services-list__submenu--security li:nth-of-type(2)::after {
     @include pseudo-els(49%, -30px);
     content: '\e909';
 }
-.services-list__submenu--secutiry li:nth-of-type(3)::after {
+.services-list__submenu--security li:nth-of-type(3)::after {
     @include pseudo-els(49%, -30px);
     content: '\e906';
 }
-.services-list__submenu--secutiry li:nth-of-type(4)::after {
+.services-list__submenu--security li:nth-of-type(4)::after {
     @include pseudo-els(49%, -30px);
     content: '\e939';
 }
-.services-list__submenu--secutiry li:nth-of-type(5)::after {
+.services-list__submenu--security li:nth-of-type(5)::after {
     @include pseudo-els(49%, -30px);
     content: '\e905';
 }
-.services-list__submenu--secutiry li:nth-of-type(6)::after {
+.services-list__submenu--security li:nth-of-type(6)::after {
     @include pseudo-els(49%, -30px);
     content: '\e904';
 }
-.services-list__submenu--secutiry li:nth-of-type(7)::after {
+.services-list__submenu--security li:nth-of-type(7)::after {
     @include pseudo-els(49%, -30px);
     content: '\f085';
 }
