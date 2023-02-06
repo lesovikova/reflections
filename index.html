@@ -5,226 +5,147 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NetMatters</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
     <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="js/slick/slick/slick.css" />
+    <link rel="stylesheet" href="js/slick/slick/slick-theme.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="body-wrapper">
     <!-- HEADER -->
     <header class="header">
       <div class="upper-header">
         <div class="upper-header__division">
-        <a href="#" class="logo"
-          ><img src="img/f-logo.png" alt="Netmatters"  /></a>
-        <button class="header__button-support header__button">Support</button>
-        <button class="header__button-contact header__button">Contact</button>
-        <a href="tel:01603704020" class="header__phone"></a>
+          <a href="#" class="logo"
+            ><img src="img/f-logo.png" alt="Netmatters"
+          /></a>
+          <button class="header__button-support header__button">Support</button>
+          <button class="header__button-contact header__button">Contact</button>
+          <a href="tel:01603704020" class="header__phone"></a>
 
-        <div class="menu-btn">
-          <span class="menu-btn__burger"></span
-          ><span class="menu-btn__burger"></span
-          ><span class="menu-btn__burger"></span>
+          <div class="menu-btn" id="menu-brg">
+            <span class="menu-btn__burger"></span
+            ><span class="menu-btn__burger"></span
+            ><span class="menu-btn__burger"></span>
+          </div>
+
+          <form action="get" class="search-form">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="search-form__field"
+            />
+            <button type="submit" class="search-form__submit"></button>
+          </form>
         </div>
-      
-        <form action="get" class="search-form">
-          <input
-            type="text"
-            placeholder="Search..."
-            class="search-form__field"
-          />
-          <button type="submit" class="search-form__submit"></button>
-        </form>
-      </div>
 
-        <!-- This is the side menu -->
-        <nav class="is-hidden">
-          <ul class="side-menu">
-            <li class="side-menu__submenu">
-              <a href="" class="side-menu__link"> Services </a>
-              <ul>
-                <li class="side-menu__item">
-                  <a href="#" class="side-menu__link">Bespoke software</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">IT support</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Digital Marketing</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Telecoms services</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Web design</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Cyber security</a>
-                </li>
-              </ul>
-            </li>
-            <li class="side-menu__submenu">
-              <a href="" class="side-menu__link"> Our work </a>
-              <ul>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Case studies</a>
-                </li>
-              </ul>
-            </li>
-            <li class="side-menu__submenu">
-              <a href="" class="side-menu__link"> Our knowledge </a>
-              <ul>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Technologies</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Industries</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">News</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Insights</a>
-                </li>
-              </ul>
-            </li>
-            <li class="side-menu__submenu">
-              <a href="" class="side-menu__link"> Training </a>
-              <ul>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link"
-                    >Train for a career in tech</a
-                  >
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Skills bootcamp</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link"
-                    >SCS frequently asked questions</a
-                  >
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Scion collaborators</a>
-                </li>
-              </ul>
-            </li>
-            <li class="side-menu__submenu">
-              <a href="" class="side-menu__link"> Events </a>
-              <ul>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">GA4 webinar</a>
-                </li>
-              </ul>
-            </li>
-            <li class="side-menu__submenu">
-              <a href="" class="side-menu__link"> Our company </a>
-              <ul>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Our careers</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Our team</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">Our culture</a>
-                </li>
-                <li class="side-menu__item">
-                  <a href="" class="side-menu__link">our benefits</a>
-                </li>
-              </ul>
-            </li>
-            <li class="side-menu__submenu">
-              <a href="" class="side-menu__link"> Contact us </a>
-              <ul>
-                <li class="dside-menu__item">
-                  <a href="" class="side-menu__list">Cambridge office</a>
-                </li>
-                <li class="dside-menu__item">
-                  <a href="" class="side-menu__list">Wymondham office</a>
-                </li>
-                <li class="dside-menu__item">
-                  <a href="" class="side-menu__list">Great Yarmouth office</a>
-                </li>
-              </ul>
-            </li>
-            <li class="side-menu__submenu">
-              <a href="" class="side-menu__link">Covid risk assessments</a>
-            </li>
-          </ul>
-        </nav>
+        
       </div>
       <!-- this is menu of the services -->
-      <div class="bottom-header is-hidden">
+      <div class="bottom-header" id="bottom-header">
         <nav class="services-nav">
           <ul class="services-list">
+            <li class="services-list__submenu services-list__contact">
+              <a
+                href="https://www.netmatters.co.uk/contact-us"
+                class="services-list__link-heading"
+                >Contact us</a
+              >
+            </li>
             <li class="services-list__submenu services-list__submenu--software">
-              <a href="#" class="services-list__link-heading services-list__link-heading--software">
+              <a
+                href="#"
+                class="services-list__link-heading services-list__link-heading--software"
+              >
                 <span class="services-list__heading">Bespoke </span
                 ><span class="services-list__heading">software</span>
               </a>
-              <div class="services-list__underwrapper services-list__underwrapper--software">
-              <ul class="services-list__under-list services-list__under-list--software">
-                <li class="services-list__header">
-                  Our Bespoke Software Services
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link">Bespoke CRM & ERP</a>
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link"
-                    >Mobile App Development</a
-                  >
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link">Operational Systems</a>
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link">Intranet Development</a>
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link">Business Automation</a>
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link">Bespoke Databases</a>
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link"
-                    >Business Central Implementation</a
-                  >
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link"
-                    >Customer Portal Development</a
-                  >
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link"
-                    >Software Integrations</a
-                  >
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link"
-                    >Sharepoint Development</a
-                  >
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link"
-                    >Internet of Things (IoT) Software</a
-                  >
-                </li>
-                <li class="service-list__item">
-                  <a href="" class="service-list__link">Reporting Hub</a>
-                </li>
-              </ul>
-            </div>
+              <div
+                class="services-list__underwrapper services-list__underwrapper--software"
+              >
+                <ul
+                  class="services-list__under-list services-list__under-list--software"
+                >
+                  <li class="services-list__header is-hidden">
+                    Our Bespoke Software Services
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link">Bespoke CRM</a>
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link"
+                      >Mobile App Development</a
+                    >
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link"
+                      >Operational Systems</a
+                    >
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link"
+                      >Intranet Development</a
+                    >
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link"
+                      >Business Automation</a
+                    >
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link">Bespoke Databases</a>
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link"
+                      >Business Central Implementation</a
+                    >
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link"
+                      >Customer Portal Development</a
+                    >
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link"
+                      >Software Integrations</a
+                    >
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link"
+                      >Sharepoint Development</a
+                    >
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link"
+                      >Internet of Things (IoT) Software</a
+                    >
+                  </li>
+                  <li class="service-list__item">
+                    <a href="" class="service-list__link">Reporting Hub</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="services-list__submenu services-list__submenu--it">
-              <a href="#" class="services-list__link-heading services-list__link-heading--it">
+              <a
+                href="#"
+                class="services-list__link-heading services-list__link-heading--it"
+              >
                 <span class="services-list__heading">IT </span
                 ><span class="services-list__heading">support</span>
               </a>
-              <div class="services-list__underwrapper services-list__underwrapper--it">
-                <ul class="services-list__under-list services-list__under-list--it">
-                  <li class="services-list__header">Our IT Support Services</li>
+              <div
+                class="services-list__underwrapper services-list__underwrapper--it"
+              >
+                <ul
+                  class="services-list__under-list services-list__under-list--it"
+                >
+                  <li class="services-list__header is-hidden">
+                    Our IT Support Services
+                  </li>
                   <li class="service-list__item">
                     <a href="" class="service-list__link">Managed IT Support</a>
                   </li>
@@ -254,14 +175,23 @@
                 </ul>
               </div>
             </li>
-            <li class="services-list__submenu services-list__submenu--marketing">
-              <a href="#" class="services-list__link-heading services-list__link-heading--marketing">
+            <li
+              class="services-list__submenu services-list__submenu--marketing"
+            >
+              <a
+                href="#"
+                class="services-list__link-heading services-list__link-heading--marketing"
+              >
                 <span class="services-list__heading">Digital </span
                 ><span class="services-list__heading">marketing</span>
               </a>
-              <div class="services-list__underwrapper services-list__underwrapper--marketing">
-                <ul class="services-list__under-list services-list__under-list--marketing">
-                  <li class="services-list__header">
+              <div
+                class="services-list__underwrapper services-list__underwrapper--marketing"
+              >
+                <ul
+                  class="services-list__under-list services-list__under-list--marketing"
+                >
+                  <li class="services-list__header is-hidden">
                     Our Digital Marketing Services
                   </li>
                   <li class="service-list__item">
@@ -291,16 +221,25 @@
                     <a href="" class="service-list__link">Content Marketing</a>
                   </li>
                 </ul>
-                </div>
+              </div>
             </li>
             <li class="services-list__submenu services-list__submenu--telecoms">
-              <a href="#" class="services-list__link-heading services-list__link-heading--telecoms">
+              <a
+                href="#"
+                class="services-list__link-heading services-list__link-heading--telecoms"
+              >
                 <span class="services-list__heading">Telecoms </span
                 ><span class="services-list__heading">services</span>
               </a>
-              <div class="services-list__underwrapper services-list__underwrapper--telecoms">
-                <ul class="services-list__under-list services-list__under-list--telecoms">
-                  <li class="services-list__header">Our Telecoms Services</li>
+              <div
+                class="services-list__underwrapper services-list__underwrapper--telecoms"
+              >
+                <ul
+                  class="services-list__under-list services-list__under-list--telecoms"
+                >
+                  <li class="services-list__header is-hidden">
+                    Our Telecoms Services
+                  </li>
                   <li class="service-list__item">
                     <a href="" class="service-list__link">Business Mobile</a>
                   </li>
@@ -326,16 +265,25 @@
                     <a href="" class="service-list__link">3CX Systems</a>
                   </li>
                 </ul>
-                </div>
+              </div>
             </li>
             <li class="services-list__submenu services-list__submenu--design">
-              <a href="#" class="services-list__link-heading services-list__link-heading--design">
+              <a
+                href="#"
+                class="services-list__link-heading services-list__link-heading--design"
+              >
                 <span class="services-list__heading">Web </span
                 ><span class="services-list__heading">design</span>
               </a>
-              <div class="services-list__underwrapper services-list__underwrapper--design">
-                <ul class="services-list__under-list services-list__under-list--design">
-                  <li class="services-list__header">Our Web Design Services</li>
+              <div
+                class="services-list__underwrapper services-list__underwrapper--design"
+              >
+                <ul
+                  class="services-list__under-list services-list__under-list--design"
+                >
+                  <li class="services-list__header is-hidden">
+                    Our Web Design Services
+                  </li>
                   <li class="service-list__item">
                     <a href="" class="service-list__link"
                       >Bespoke Website Design</a
@@ -363,16 +311,23 @@
                     <a href="" class="service-list__link">Web Hosting</a>
                   </li>
                 </ul>
-                </div>
+              </div>
             </li>
             <li class="services-list__submenu services-list__submenu--security">
-              <a href="#" class="services-list__link-heading services-list__link-heading--security">
+              <a
+                href="#"
+                class="services-list__link-heading services-list__link-heading--security"
+              >
                 <span class="services-list__heading">Cyber </span
                 ><span class="services-list__heading">security</span>
               </a>
-              <div class="services-list__underwrapper services-list__underwrapper--security">
-                <ul class="services-list__under-list services-list__under-list--security">
-                  <li class="services-list__header">
+              <div
+                class="services-list__underwrapper services-list__underwrapper--security"
+              >
+                <ul
+                  class="services-list__under-list services-list__under-list--security"
+                >
+                  <li class="services-list__header is-hidden">
                     Our Cyber Security Services
                   </li>
                   <li class="service-list__item">
@@ -402,16 +357,23 @@
                     <a href="" class="service-list__link">Hacking Prevention</a>
                   </li>
                 </ul>
-                </div>
+              </div>
             </li>
             <li class="services-list__submenu services-list__submenu--training">
-              <a href="#" class="services-list__link-heading services-list__link-heading--training">
+              <a
+                href="#"
+                class="services-list__link-heading services-list__link-heading--training"
+              >
                 <span class="services-list__heading">Developer </span
                 ><span class="services-list__heading">course</span>
               </a>
-              <div class="services-list__underwrapper services-list__underwrapper--training">
-                <ul class="services-list__under-list services-list__under-list--training">
-                  <li class="services-list__header">
+              <div
+                class="services-list__underwrapper services-list__underwrapper--training"
+              >
+                <ul
+                  class="services-list__under-list services-list__under-list--training"
+                >
+                  <li class="services-list__header is-hidden">
                     Our Developer Course Services
                   </li>
                   <li class="service-list__item">
@@ -433,7 +395,139 @@
                     >
                   </li>
                 </ul>
-                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- This is the side menu -->
+        <nav class="is-hidden side-menu" id="side-menu">
+          <ul class="side-menu__wrap">
+            <li class="side-menu__submenu side-menu__submenu--hidden is-hidden">
+              <a href="" class="side-menu__link side-menu__link--submenu">
+                Services
+              </a>
+              <ul>
+                <li class="side-menu__item">
+                  <a href="#" class="side-menu__link">Bespoke software</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">IT support</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Digital Marketing</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Telecoms services</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Web design</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Cyber security</a>
+                </li>
+              </ul>
+            </li>
+            <li class="side-menu__submenu">
+              <a href="" class="side-menu__link side-menu__link--submenu">
+                Our work
+              </a>
+              <ul>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Case studies</a>
+                </li>
+              </ul>
+            </li>
+            <li class="side-menu__submenu">
+              <a href="" class="side-menu__link side-menu__link--submenu">
+                Our knowledge
+              </a>
+              <ul>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Technologies</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Industries</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">News</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Insights</a>
+                </li>
+              </ul>
+            </li>
+            <li class="side-menu__submenu">
+              <a href="" class="side-menu__link side-menu__link--submenu">
+                Training
+              </a>
+              <ul>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link"
+                    >Train for a career in tech</a
+                  >
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Skills bootcamp</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link"
+                    >SCS frequently asked questions</a
+                  >
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Scion collaborators</a>
+                </li>
+              </ul>
+            </li>
+            <li class="side-menu__submenu">
+              <a href="" class="side-menu__link side-menu__link--submenu">
+                Events
+              </a>
+              <ul>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">GA4 webinar</a>
+                </li>
+              </ul>
+            </li>
+            <li class="side-menu__submenu">
+              <a href="" class="side-menu__link side-menu__link--submenu">
+                Our company
+              </a>
+              <ul>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Our careers</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Our team</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Our culture</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">our benefits</a>
+                </li>
+              </ul>
+            </li>
+            <li class="side-menu__submenu">
+              <a href="" class="side-menu__link side-menu__link--submenu">
+                Contact us
+              </a>
+              <ul>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Cambridge office</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Wymondham office</a>
+                </li>
+                <li class="side-menu__item">
+                  <a href="" class="side-menu__link">Great Yarmouth office</a>
+                </li>
+              </ul>
+            </li>
+            <li class="side-menu__submenu">
+              <a href="" class="side-menu__link side-menu__link--submenu"
+                >Covid risk assessments</a
+              >
             </li>
           </ul>
         </nav>
@@ -441,68 +535,74 @@
     </header>
 
     <main>
-    <!-- BANNER -->
+      <!-- BANNER -->
       <div class="banner">
         <div class="banner__wrap">
           <div class="banner__wrapper">
-          <h1 class="banner__header">
-            The East Of England's Leading Technology Company
-          </h1>
-          <p class="banner__text">
-            Performance-driven digital and technology services <br>with complete
-            transparency.
-          </p>
-          <button class="banner__button banner__button--design">
-            Contact us
-          </button>
-        </div>
-      </div>
-        <div class="banner__wrap is-hidden">
-          <div class="banner__wrapper">
-          <h1 class="banner__header">Bespoke Software</h1>
-          <p class="banner__text">Delivering expert bespoke software</p>
-          <button class="banner__button banner__button--software">
-            Find out more
-          </button>
-        </div>
-        <div class="banner__wrap is-hidden">
-          <h1 class="banner__header">IT Support</h1>
-          <p class="banner__text">Fast and cost-effective IT support</p>
-          <button class="banner__button banner__button--it">
-            Find out more
-          </button>
+            <h1 class="banner__header">
+              The East Of England's Leading Technology Company
+            </h1>
+            <p class="banner__text">
+              Performance-driven digital and technology services <br />with
+              complete transparency.
+            </p>
+            <button class="banner__button banner__button--design">
+              Contact us
+            </button>
           </div>
         </div>
-        <div class="banner__wrap is-hidden">
+        <div class="banner__wrap">
           <div class="banner__wrapper">
-          <h1 class="banner__header">Digital Marketing</h1>
-          <p class="banner__text">Generating your new business through</p>
-          <button class="banner__button banner__button--marketing">
-            Find out more
-          </button>
-        </div>
-        <div class="banner__wrap is-hidden">
-          <h1 class="banner__header">Telecoms Services</h1>
-          <p class="banner__text">A new approach to connectivity, see</p>
-          <button class="banner__button banner__button--telecoms">
-            Find out more
-          </button>
+            <h1 class="banner__header">Bespoke Software</h1>
+            <p class="banner__text">Delivering expert bespoke software</p>
+            <button class="banner__button banner__button--software">
+              Find out more
+            </button>
           </div>
         </div>
-        <div class="banner__wrap is-hidden">
+        <div class="banner__wrap">
           <div class="banner__wrapper">
-          <h1 class="banner__header">Web Design</h1>
-          <p class="banner__text">For businesses looking to make a strong</p>
-          <button class="banner__button banner__button--design">
-            Find out more
-          </button>
+            <h1 class="banner__header">IT Support</h1>
+            <p class="banner__text">Fast and cost-effective IT support</p>
+            <button class="banner__button banner__button--it">
+              Find out more
+            </button>
+          </div>
         </div>
-        <div class="banner__wrap is-hidden">
-          <h1 class="banner__header">Cyber Security</h1>
-          <p class="banner__text">Keeping businesses and their customers</p>
-          <button class="banner__button banner__button--security">
-            Find out more
-          </button>
+        <div class="banner__wrap">
+          <div class="banner__wrapper">
+            <h1 class="banner__header">Digital Marketing</h1>
+            <p class="banner__text">Generating your new business through</p>
+            <button class="banner__button banner__button--marketing">
+              Find out more
+            </button>
+          </div>
+        </div>
+        <div class="banner__wrap">
+          <div class="banner__wrapper">
+            <h1 class="banner__header">Telecoms Services</h1>
+            <p class="banner__text">A new approach to connectivity, see</p>
+            <button class="banner__button banner__button--telecoms">
+              Find out more
+            </button>
+          </div>
+        </div>
+        <div class="banner__wrap">
+          <div class="banner__wrapper">
+            <h1 class="banner__header">Web Design</h1>
+            <p class="banner__text">For businesses looking to make a strong</p>
+            <button class="banner__button banner__button--design">
+              Find out more
+            </button>
+          </div>
+        </div>
+        <div class="banner__wrap">
+          <div class="banner__wrapper">
+            <h1 class="banner__header">Cyber Security</h1>
+            <p class="banner__text">Keeping businesses and their customers</p>
+            <button class="banner__button banner__button--security">
+              Find out more
+            </button>
           </div>
         </div>
       </div>
@@ -520,11 +620,9 @@
             Bespoke software solutions for all your business needs including
             integrations and reporting.
           </p>
-          <button
-              class="services-sec__button services-sec__button--software"
-            >
-              Read more
-            </button>
+          <button class="services-sec__button services-sec__button--software">
+            Read more
+          </button>
         </div>
         <div class="services-sec__item services-sec__item--it">
           <div class="services-sec__icon services-sec__icon--it"></div>
@@ -534,8 +632,8 @@
             your exact business needs.
           </p>
           <button class="services-sec__button services-sec__button--it">
-              Read more
-            </button>
+            Read more
+          </button>
         </div>
         <div class="services-sec__item services-sec__item--marketing">
           <div class="services-sec__icon services-sec__icon--marketing"></div>
@@ -544,11 +642,9 @@
             Driven brand awareness & ROI through creative digital marketing
             campaigns.
           </p>
-          <button
-              class="services-sec__button services-sec__button--marketing"
-            >
-              Read more
-            </button>
+          <button class="services-sec__button services-sec__button--marketing">
+            Read more
+          </button>
         </div>
         <div class="services-sec__item services-sec__item--telecoms">
           <div class="services-sec__icon services-sec__icon--telecoms"></div>
@@ -557,11 +653,9 @@
             Business telephony solutions including mobile & connectivity
             solutions.
           </p>
-          <button
-              class="services-sec__button services-sec__button--telecoms"
-            >
-              Read more
-            </button>
+          <button class="services-sec__button services-sec__button--telecoms">
+            Read more
+          </button>
         </div>
         <div class="services-sec__item services-sec__item--design">
           <div class="services-sec__icon services-sec__icon--design"></div>
@@ -571,8 +665,8 @@
             impression.
           </p>
           <button class="services-sec__button services-sec__button--design">
-              Read more
-            </button>
+            Read more
+          </button>
         </div>
         <div class="services-sec__item services-sec__item--security">
           <div class="services-sec__icon services-sec__icon--security"></div>
@@ -580,11 +674,9 @@
           <p class="services-sec__text">
             Prevention, testing, consultancy & breach management services.
           </p>
-          <button
-              class="services-sec__button services-sec__button--security"
-            >
-              Read more
-            </button>
+          <button class="services-sec__button services-sec__button--security">
+            Read more
+          </button>
         </div>
         <div class="services-sec__item services-sec__item--training">
           <div class="services-sec__icon services-sec__icon--training"></div>
@@ -593,11 +685,9 @@
             Web design & software training courses designed to secure a job in
             tech.
           </p>
-          <button
-              class="services-sec__button services-sec__button--training"
-            >
-              Read more
-            </button>
+          <button class="services-sec__button services-sec__button--training">
+            Read more
+          </button>
         </div>
       </section>
 
@@ -623,7 +713,7 @@
           <img
             src="img/carousel/google-partner.jpg"
             alt=""
-            class="partners__logo--active "
+            class="partners__logo--active"
           />
         </div>
         <div class="partners__item">
@@ -715,52 +805,57 @@
       <!-- REVIEWS SECTION -->
       <section class="reviews">
         <div class="reviews__wrapper">
-        <article class="reviews__article reviews__article--left">
-          <h2 class="reviews__heading">Welcome To Netmatters</h2>
-          <div class="reviews__text">
-            <p class="reviews__paragraph">
-              Netmatters is a leading <a href="">Bespoke Software</a>, <a href="">IT Support</a>, and <a href="">Digital
-                Marketing</a> company based in the East of England with offices in
-              <a href="">Cambridge</a>, <a href="">Wymondham</a>, and <a href="">Great Yarmouth</a>.
-            </p>
-            <p class="reviews__paragraph">
-              We aren't tied into contracts with third-party providers, so you
-              know that our recommendations for your business are based purely
-              with one benefit in mind: to help improve your business with the
-              most appropriate solutions.
-            </p>
-            <p class="reviews__paragraph">
-              We pride ourselves on being an ethical business and have a unique
-              business offering and cost model that ensures you get the most
-              from our relationship in an upfront manner.
-            </p>
-          </div>
-          <button class="reviews__button reviews__button--read-more">
-            Read more
-          </button>
-        </article>
-        <article class="reviews__article reviews__article--right">
-          <h2 class="reviews__heading">What Our Clients Think</h2>
-          <div class="reviews__stars"></div>
-          <div class="reviews__text">
-            <p class="reviews__quote">
-              Netmatters stood out from the start. Great guys and very easy to
-              work with. Both the build and digital marketing teams are clearly
-              skilled -they know their stuff! They delivered a website to our
-              (high!) expectations and went over and above to ensure we were
-              satisfied clients - and we are!
-            </p>
-            <p class="reviews__quote-cite">
-              Eleanor Bishop, Head of Marketing - <span class="reviews__quote-cite--signiture"><a href="">Ashcroft Partnership LLP</a></span>
-            </p>
-          </div>
-          <button class="reviews__button reviews__button--google-reviews">
-            google reviews
-          </button>
-          <button class="reviews__button reviews__button--trustpilot-reviews">
-            trustpilot reviews
-          </button>
-        </article>
+          <article class="reviews__article reviews__article--left">
+            <h2 class="reviews__heading">Welcome To Netmatters</h2>
+            <div class="reviews__text">
+              <p class="reviews__paragraph">
+                Netmatters is a leading <a href="">Bespoke Software</a>,
+                <a href="">IT Support</a>, and
+                <a href="">Digital Marketing</a> company based in the East of
+                England with offices in <a href="">Cambridge</a>,
+                <a href="">Wymondham</a>, and <a href="">Great Yarmouth</a>.
+              </p>
+              <p class="reviews__paragraph">
+                We aren't tied into contracts with third-party providers, so you
+                know that our recommendations for your business are based purely
+                with one benefit in mind: to help improve your business with the
+                most appropriate solutions.
+              </p>
+              <p class="reviews__paragraph">
+                We pride ourselves on being an ethical business and have a
+                unique business offering and cost model that ensures you get the
+                most from our relationship in an upfront manner.
+              </p>
+            </div>
+            <button class="reviews__button reviews__button--read-more">
+              Read more
+            </button>
+          </article>
+          <article class="reviews__article reviews__article--right">
+            <h2 class="reviews__heading">What Our Clients Think</h2>
+            <div class="reviews__stars"></div>
+            <div class="reviews__text">
+              <p class="reviews__quote">
+                Netmatters stood out from the start. Great guys and very easy to
+                work with. Both the build and digital marketing teams are
+                clearly skilled -they know their stuff! They delivered a website
+                to our (high!) expectations and went over and above to ensure we
+                were satisfied clients - and we are!
+              </p>
+              <p class="reviews__quote-cite">
+                Eleanor Bishop, Head of Marketing -
+                <span class="reviews__quote-cite--signiture"
+                  ><a href="">Ashcroft Partnership LLP</a></span
+                >
+              </p>
+            </div>
+            <button class="reviews__button reviews__button--google-reviews">
+              google reviews
+            </button>
+            <button class="reviews__button reviews__button--trustpilot-reviews">
+              trustpilot reviews
+            </button>
+          </article>
         </div>
       </section>
 
@@ -870,220 +965,240 @@
       <!-- CLIENTS SECTION -->
       <aside class="clients is-hidden">
         <div class="clients__wrapper">
-        <div class="clients__item">
-          <div class="clients__hover is-hidden">
-            <h3 class="clients__heading">Busseys</h3>
-            <div class="clients__line"></div>
-            <p class="clients__text">One of the UK's leading Ford dealerships.</p>
+          <div class="clients__item">
+            <div class="clients__hover is-hidden">
+              <h3 class="clients__heading">Busseys</h3>
+              <div class="clients__line"></div>
+              <p class="clients__text">
+                One of the UK's leading Ford dealerships.
+              </p>
+            </div>
+            <img
+              src="img/clients/home-T5gi.jpg"
+              alt="Busseys"
+              class="clients__logo"
+            />
+            <img
+              src="img/clients/home-gZQR.png"
+              alt="Busseys logo"
+              class="clients__logo clients__logo--active"
+            />
           </div>
-          <img
-            src="img/clients/home-T5gi.jpg"
-            alt="Busseys"
-            class="clients__logo"
-          />
-          <img
-            src="img/clients/home-gZQR.png"
-            alt="Busseys logo"
-            class="clients__logo clients__logo--active"
-          />
-        </div>
-        <div class="clients__item">
-          <div class="clients__hover is-hidden">
-            <h3 class="clients__heading">Crane Garden Builders</h3>
-            <div class="clients__line"></div>
-            <p class="clients__text">Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in the UK.</p>
+          <div class="clients__item">
+            <div class="clients__hover is-hidden">
+              <h3 class="clients__heading">Crane Garden Builders</h3>
+              <div class="clients__line"></div>
+              <p class="clients__text">
+                Leading manufacturer and supplier of high-end garden rooms,
+                summerhouses, workshops and sheds in the UK.
+              </p>
+            </div>
+            <img
+              src="img/clients/home-BsyK.jpg"
+              alt="Crane"
+              class="clients__logo"
+            />
+            <img
+              src="img/clients/home-MjHw.png"
+              alt="Crane logo"
+              class="clients__logo clients__logo--active"
+            />
           </div>
-          <img
-            src="img/clients/home-BsyK.jpg"
-            alt="Crane"
-            class="clients__logo"
-          />
-          <img
-            src="img/clients/home-MjHw.png"
-            alt="Crane logo"
-            class="clients__logo clients__logo--active"
-          />
-        </div>
-        <div class="clients__item">
-          <div class="clients__hover is-hidden">
-            <h3 class="clients__heading">Beat</h3>
-            <div class="clients__line"></div>
-            <p class="clients__text">The UK's eating disorder charity founded in 1989.</p>
+          <div class="clients__item">
+            <div class="clients__hover is-hidden">
+              <h3 class="clients__heading">Beat</h3>
+              <div class="clients__line"></div>
+              <p class="clients__text">
+                The UK's eating disorder charity founded in 1989.
+              </p>
+            </div>
+            <img
+              src="img/clients/home-RfLc.jpg"
+              alt="Beat"
+              class="clients__logo"
+            />
+            <img
+              src="img/clients/home-ukEL.png"
+              alt="Beat logo"
+              class="clients__logo clients__logo--active"
+            />
           </div>
-          <img
-            src="img/clients/home-RfLc.jpg"
-            alt="Beat"
-            class="clients__logo"
-          />
-          <img
-            src="img/clients/home-ukEL.png"
-            alt="Beat logo"
-            class="clients__logo clients__logo--active"
-          />
-        </div>
-        <div class="clients__item">
-          <div class="clients__hover is-hidden">
-            <h3 class="clients__heading">Northern Diver</h3>
-            <div class="clients__line"></div>
-            <p class="clients__text">Global water based equipment manufacturers for sport, military, commercial and rescue businesses.</p>
+          <div class="clients__item">
+            <div class="clients__hover is-hidden">
+              <h3 class="clients__heading">Northern Diver</h3>
+              <div class="clients__line"></div>
+              <p class="clients__text">
+                Global water based equipment manufacturers for sport, military,
+                commercial and rescue businesses.
+              </p>
+            </div>
+            <img
+              src="img/clients/home-jHUl.jpg"
+              alt="Diver"
+              class="clients__logo"
+            />
+            <img
+              src="img/clients/home-kGn4.png"
+              alt="Diver logo"
+              class="clients__logo clients__logo--active"
+            />
           </div>
-          <img
-            src="img/clients/home-jHUl.jpg"
-            alt="Diver"
-            class="clients__logo"
-          />
-          <img
-            src="img/clients/home-kGn4.png"
-            alt="Diver logo"
-            class="clients__logo clients__logo--active "
-          />
         </div>
-      </div>
       </aside>
 
       <!-- NEWSLETTER FORM -->
       <section class="newsletter">
         <div class="newsletter__wrapper">
-        <h2 class="newsletter__heading">Email Newsletter Sign-Up</h2>
-        <form action="post" class="newsletter__form">
-          <div class="newsletter__item">
-            <label for="user_name" class="newsletter__label"
-              >Your Name <span class="newsletter__required">*</span></label
-            ><input type="text" class="newsletter__input" id="user_name" />
-          </div>
-          <div class="newsletter__item">
-            <label for="user_email" class="newsletter__label"
-              >Your Email <span class="newsletter__required">*</span></label
-            ><input type="text" class="newsletter__input" id="user_email" />
-          </div>
-          <label for="marketing" class="newsletter__label-chbox">
-            <input
-              type="checkbox"
-              id="marketing"
-              class="newsletter__checkbox"
-            /><span class="newsletter__new-checkbox"></span> Please tick this
-            box if you wish to receive marketing information from us. Please see
-            our <a href="">Privacy Policy</a> for more information on how we keep your data
-            safe.</label
-          >
-          <input type="button" value="Subscribe" class="newsletter__submit"/>
-        </form>
-      </div>
+          <h2 class="newsletter__heading">Email Newsletter Sign-Up</h2>
+          <form action="post" class="newsletter__form">
+            <div class="newsletter__item">
+              <label for="user_name" class="newsletter__label"
+                >Your Name <span class="newsletter__required">*</span></label
+              ><input type="text" class="newsletter__input" id="user_name" />
+            </div>
+            <div class="newsletter__item">
+              <label for="user_email" class="newsletter__label"
+                >Your Email <span class="newsletter__required">*</span></label
+              ><input type="text" class="newsletter__input" id="user_email" />
+            </div>
+            <label for="marketing" class="newsletter__label-chbox">
+              <input
+                type="checkbox"
+                id="marketing"
+                class="newsletter__checkbox"
+              /><span class="newsletter__new-checkbox"></span> Please tick this
+              box if you wish to receive marketing information from us. Please
+              see our <a href="">Privacy Policy</a> for more information on how
+              we keep your data safe.</label
+            >
+            <input type="button" value="Subscribe" class="newsletter__submit" />
+          </form>
+        </div>
       </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__wrapper">
-      <div class="footer__top">
-        <ul class="footer-menu">
-          <li class="footer-menu__sub">
-            ABOUT NETMATTERS
-            <ul>
-              <li class="footer-menu__item"><a href="#">News</a></li>
-              <li class="footer-menu__item"><a href="#">Our Careers</a></li>
-              <li class="footer-menu__item"><a href="#">Our Team</a></li>
-              <li class="footer-menu__item"><a href="#">Privacy Policy</a></li>
-              <li class="footer-menu__item"><a href="#">Cookie Policy</a></li>
-              <li class="footer-menu__item">
-                <a href="#">Terms & Conditions</a>
-              </li>
-              <li class="footer-menu__item">
-                <a href="#">Environmental Policy</a>
-              </li>
-              <li class="footer-menu__item"><a href="#">Contact Us</a></li>
-            </ul>
-          </li>
-          <li class="footer-menu__sub">
-            OUR SERVICES
-            <ul>
-              <li class="footer-menu__item">
-                <a href="#">Bespoke Software</a>
-              </li>
-              <li class="footer-menu__item"><a href="#">IT Support</a></li>
-              <li class="footer-menu__item">
-                <a href="#">Digital Marketing</a>
-              </li>
-              <li class="footer-menu__item">
-                <a href="#">Telecoms Services</a>
-              </li>
-              <li class="footer-menu__item"><a href="#">Web Design</a></li>
-              <li class="footer-menu__item"><a href="#">Cyber Security</a></li>
-              <li class="footer-menu__item">
-                <a href="#">Developer Training</a>
-              </li>
-            </ul>
-          </li>
-          <li class="footer-menu__sub">
+        <div class="footer__top">
+          <ul class="footer-menu">
+            <li class="footer-menu__sub">
+              ABOUT NETMATTERS
+              <ul>
+                <li class="footer-menu__item"><a href="#">News</a></li>
+                <li class="footer-menu__item"><a href="#">Our Careers</a></li>
+                <li class="footer-menu__item"><a href="#">Our Team</a></li>
+                <li class="footer-menu__item">
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li class="footer-menu__item"><a href="#">Cookie Policy</a></li>
+                <li class="footer-menu__item">
+                  <a href="#">Terms & Conditions</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#">Environmental Policy</a>
+                </li>
+                <li class="footer-menu__item"><a href="#">Contact Us</a></li>
+              </ul>
+            </li>
+            <li class="footer-menu__sub">
+              OUR SERVICES
+              <ul>
+                <li class="footer-menu__item">
+                  <a href="#">Bespoke Software</a>
+                </li>
+                <li class="footer-menu__item"><a href="#">IT Support</a></li>
+                <li class="footer-menu__item">
+                  <a href="#">Digital Marketing</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#">Telecoms Services</a>
+                </li>
+                <li class="footer-menu__item"><a href="#">Web Design</a></li>
+                <li class="footer-menu__item">
+                  <a href="#">Cyber Security</a>
+                </li>
+                <li class="footer-menu__item">
+                  <a href="#">Developer Training</a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer-menu__sub">
               CAMBRIDGE OFFICE
-            <ul>
-              <li class="footer-menu__item">Unit 1.31,</li>
-              <li class="footer-menu__item">St John's Innovation Centre,</li>
-              <li class="footer-menu__item">Cowley Road, Milton,</li>
-              <li class="footer-menu__item">Cambridge,</li>
-              <li class="footer-menu__item">CB4 0WS</li>
-              <li class="footer-menu__item">
-                <a href="tel:+4401223375772">Tel: 01223 37 57 72</a>
-              </li>
-            </ul>
-          </li>
-          <li class="footer-menu__sub">
-            WYMONDHAM OFFICE
-            <ul>
-              <li class="footer-menu__item">Unit 15,</li>
-              <li class="footer-menu__item">Penfold Drive,</li>
-              <li class="footer-menu__item">Gateway 11 Business Park,</li>
-              <li class="footer-menu__item">Wymondham, Norfolk,</li>
-              <li class="footer-menu__item">NR18 0WZ</li>
-              <li class="footer-menu__item">
-                <a href="tel:+4401603704020">Tel: 01603 70 40 20</a>
-              </li>
-            </ul>
-          </li>
-          <li class="footer-menu__sub">
-            GREAT YARMOUTH OFFICE
-            <ul>
-              <li class="footer-menu__item">Suite F23,</li>
-              <li class="footer-menu__item">Beacon Innovation Centre,</li>
-              <li class="footer-menu__item">Beacon Park, Gorleston,</li>
-              <li class="footer-menu__item">Great Yarmouth, Norfolk,</li>
-              <li class="footer-menu__item">NR31 7RA</li>
-              <li class="footer-menu__item">
-                <a href="tel:+4401493603204">Tel: 01493 60 32 04</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+              <ul>
+                <li class="footer-menu__item">Unit 1.31,</li>
+                <li class="footer-menu__item">St John's Innovation Centre,</li>
+                <li class="footer-menu__item">Cowley Road, Milton,</li>
+                <li class="footer-menu__item">Cambridge,</li>
+                <li class="footer-menu__item">CB4 0WS</li>
+                <li class="footer-menu__item">
+                  <a href="tel:+4401223375772">Tel: 01223 37 57 72</a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer-menu__sub">
+              WYMONDHAM OFFICE
+              <ul>
+                <li class="footer-menu__item">Unit 15,</li>
+                <li class="footer-menu__item">Penfold Drive,</li>
+                <li class="footer-menu__item">Gateway 11 Business Park,</li>
+                <li class="footer-menu__item">Wymondham, Norfolk,</li>
+                <li class="footer-menu__item">NR18 0WZ</li>
+                <li class="footer-menu__item">
+                  <a href="tel:+4401603704020">Tel: 01603 70 40 20</a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer-menu__sub">
+              GREAT YARMOUTH OFFICE
+              <ul>
+                <li class="footer-menu__item">Suite F23,</li>
+                <li class="footer-menu__item">Beacon Innovation Centre,</li>
+                <li class="footer-menu__item">Beacon Park, Gorleston,</li>
+                <li class="footer-menu__item">Great Yarmouth, Norfolk,</li>
+                <li class="footer-menu__item">NR31 7RA</li>
+                <li class="footer-menu__item">
+                  <a href="tel:+4401493603204">Tel: 01493 60 32 04</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copy">
+            &copy; Copyright Netmatters 2022. All rights reserved.
+          </p>
+          <p class="footer__copy">- Sitemap</p>
+          <ul class="social">
+            <li class="social__item">
+              <a href="" class="social__link"
+                ><span class="social__logo social__logo--facebook"></span
+              ></a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link"
+                ><span class="social__logo social__logo--twitter"></span
+              ></a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link"
+                ><span class="social__logo social__logo--inst"></span
+              ></a>
+            </li>
+            <li class="social__item">
+              <a href="" class="social__link"
+                ><span class="social__logo social__logo--linkedin"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="footer__bottom">
-        <p class="footer__copy">
-          &copy; Copyright Netmatters 2022. All rights reserved.
-        </p>
-        <p class="footer__copy"> - Sitemap</p>
-        <ul class="social">
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><span class="social__logo social__logo--facebook"></span
-            ></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><span class="social__logo social__logo--twitter"></span
-            ></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><span class="social__logo social__logo--inst"></span
-            ></a>
-          </li>
-          <li class="social__item">
-            <a href="" class="social__link"
-              ><span class="social__logo social__logo--linkedin"></span
-            ></a>
-          </li>
-        </ul>
-      </div>
-    </div>
     </footer>
+  </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/slick/slick/slick.min.js"></script>
+    <script src="js/app.js"></script>
+
   </body>
 </html>

@@ -5,6 +5,7 @@
     align-items: center;
     row-gap: 15px;
     padding: 20px 15px;
+    background-color: $white;
     @include e(division) {
         display: flex;
         align-content: center;
@@ -77,6 +78,8 @@
     width: 33px;
     height: 46px;
     box-sizing: content-box;
+    transition-timing-function: linear;
+    position: relative;
     @include e(burger) {
         position: absolute;
         top: 50%;

@@ -1,13 +1,62 @@
 .banner {
     @include e(wrap) {
-        max-width: 100%;
-        padding: 5.5rem .5rem;
+        width: 100%;
+        min-height: 550px;
+        padding: 60px;
         text-align: center;
+        position: relative;
+        &::before {
+            content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(270deg,transparent 25%,#000);
+    z-index: 1;
+        }
+        
         &:first-of-type {
             background: url(../img/banner/home-YLei.png) no-repeat;
             background-size: cover;
             background-position: center;
         }
+        &:nth-of-type(2) {
+            background: url(../img/banner/home-O67Y.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        &:nth-of-type(3) {
+            background: url(../img/banner/home-gay8.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        &:nth-of-type(4) {
+            background: url(../img/banner/home-6yTp.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        &:nth-of-type(5) {
+            background: url(../img/banner/home-J8Xx.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        &:nth-of-type(6) {
+            background: url(../img/banner/home-K0pn.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        &:nth-of-type(7) {
+            background: url(../img/banner/home-kvtG.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        
+    }
+    @include e(wrapper) {
+        position: relative;
+        z-index: 3;
     }
     @include e(header) {
         font-size: rem(40px);

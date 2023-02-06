@@ -34,14 +34,31 @@
     }
 
 //Styling the menu of the services
-    .bottom-header.is-hidden {
-        display: initial;
-    }
+.bottom-header {
+    width: 100%;
+    height: 99px;
+    display: block;
+    position: initial;
+    overflow: initial;
+}
+.side-menu, .services-list__contact {
+    display: none;
+}
+
+.services-list__submenu>a:first-child {
+    border: none;
+    outline: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+
     .services-nav {
         background-color: $serviceCol;
         position: relative;
     }
     .services-list {
+        padding: 0;
         max-width: 940px;
         margin: auto;
         display: flex;
@@ -50,9 +67,10 @@
         @include e(underwrapper) {
             position: absolute;
             top: 99px;
-            width: 100vw;
+            width: 100%;
             @include universal('background-color', $colors-hover);
             left: 0;
+            z-index: 500;
         }
         @include e(link-heading) {
             display: block;
@@ -86,8 +104,8 @@
         @include e(submenu) {
             flex: 1;
             font-weight: 400;
-            padding: 50px 0 20px;
             color: $white;
+            padding: 50px 0 20px;
             @include m(design) {
                 &::before {
                     left: 39%;
@@ -112,9 +130,13 @@
         @include e(item) {
             position: relative;
             width: 30%;
+            border: none;
         }
         @include e(link) {
             font-size: rem(19px);
+            border: none;
+            outline: transparent;
+            background-color: transparent;
         }
     }
 

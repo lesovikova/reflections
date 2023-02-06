@@ -1,16 +1,17 @@
+
 .partners {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 50px;
     margin-top: 15px;
-    overflow: scroll;
     gap: 50px;
-    &::-webkit-scrollbar {
-        display: none;
-      }
+    text-align: center;
       @include e(logo) {
         @include m(active) {
           display: none;
         }
       }
 }
+
+
+

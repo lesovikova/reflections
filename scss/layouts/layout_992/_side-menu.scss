@@ -1,0 +1,12 @@
+@media all and (min-width: 992px) {
+    .side-menu {
+        width: 350px;
+        color: $white;
+    }
+    .side-menu__link.side-menu__link--submenu {
+        font-size: rem(16px);
+    }
+    .wrapper-small {
+        margin-left: -350px;
+    }
+}

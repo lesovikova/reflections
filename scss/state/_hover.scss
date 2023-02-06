@@ -99,9 +99,6 @@
             text-decoration: none;
         }
     }
-    .services-list__link-heading {
-        position: relative;
-    }
 
     .services-list__submenu:hover .services-list__link-heading::before {
         color: $white;
@@ -109,9 +106,9 @@
     .services-list__submenu:hover .services-list__link-heading::after {
         @include pseudo-els(49px, 0) {
             border: 35px solid transparent;
-            border-width: 35px 83.5px 0;
+            border-width: 35px 67px 0;
             border-top: 35px solid ;
-            z-index: 100;
+            z-index: 600;
         }
     } 
     .services-list__submenu:hover .services-list__link-heading  { 
@@ -127,7 +124,8 @@
     flex-wrap: wrap;
     align-items: center;
     text-align: left;
-    gap: 20px;
+    gap: 20px;    
+    column-gap: 30px;
     box-sizing: content-box;
     line-height: 36px;
     padding: 50px 120px;
@@ -186,4 +184,10 @@ display: block;
 .newsletter__label-chbox:hover, .newsletter__checkbox:hover, .newsletter__submit:hover {
 cursor: pointer;
 }
+}
+@media all and(min-width: 1260px) {
+    .services-list__submenu:hover .services-list__link-heading::after {
+        border-width: 35px 83.5px 0;
+
+    }
 }
