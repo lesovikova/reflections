@@ -1,7 +1,7 @@
 .banner {
     @include e(wrap) {
         width: 100%;
-        min-height: 550px;
+        height: 550px;
         padding: 60px;
         text-align: center;
         position: relative;
@@ -16,37 +16,38 @@
     z-index: 1;
         }
         
-        &:nth-of-type(2) {
+        @include m(first) {
+            padding-top: 0;
             background: url(../img/banner/home-YLei.png) no-repeat;
             background-size: cover;
             background-position: center;
         }
-        &:nth-of-type(3) {
+        @include m(second) {
             background: url(../img/banner/home-O67Y.jpg) no-repeat;
             background-size: cover;
             background-position: center;
         }
-        &:nth-of-type(4) {
+        @include m(third) {
             background: url(../img/banner/home-gay8.png) no-repeat;
             background-size: cover;
             background-position: center;
         }
-        &:nth-of-type(5) {
+        @include m(fourth) {
             background: url(../img/banner/home-6yTp.png) no-repeat;
             background-size: cover;
             background-position: center;
         }
-        &:nth-of-type(6) {
+        @include m(fifth) {
             background: url(../img/banner/home-J8Xx.png) no-repeat;
             background-size: cover;
             background-position: center;
         }
-        &:nth-of-type(7) {
+        @include m(sixth) {
             background: url(../img/banner/home-K0pn.jpg) no-repeat;
             background-size: cover;
             background-position: center;
         }
-        &:nth-of-type(8) {
+        @include m(seventh) {
             background: url(../img/banner/home-kvtG.jpg) no-repeat;
             background-size: cover;
             background-position: center;

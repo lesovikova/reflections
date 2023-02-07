@@ -1,0 +1,16 @@
+@media all and (min-width: 768px) {
+    .cookies {
+        @include e(wrapper) {
+            max-width: 598px;
+        }
+        @include e(buttons) {
+            display: flex;
+        }
+        @include e(button) {
+            @include m(change) {
+                margin-bottom: 0;
+                margin-right: 30px;
+            }
+        }
+    }
+}

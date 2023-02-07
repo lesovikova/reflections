@@ -7,7 +7,8 @@
     <title>NetMatters</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="js/slick/slick-theme.css">
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -535,8 +536,8 @@
     <main>
       <!-- BANNER -->
       <div class="banner"> 
-        <div class="banner-dots"></div>
-        <div class="banner__wrap">
+        <div class="banner__container">
+        <div class="banner__wrap banner__wrap--first">
           <div class="banner__wrapper">
             <h1 class="banner__header">
               The East Of England's Leading Technology Company
@@ -550,7 +551,7 @@
             </button>
           </div>
         </div>
-        <div class="banner__wrap">
+        <div class="banner__wrap banner__wrap--second">
           <div class="banner__wrapper">
             <h1 class="banner__header">Bespoke Software</h1>
             <p class="banner__text">Delivering expert bespoke software</p>
@@ -559,7 +560,7 @@
             </button>
           </div>
         </div>
-        <div class="banner__wrap">
+        <div class="banner__wrap banner__wrap--third">
           <div class="banner__wrapper">
             <h1 class="banner__header">IT Support</h1>
             <p class="banner__text">Fast and cost-effective IT support</p>
@@ -568,7 +569,7 @@
             </button>
           </div>
         </div>
-        <div class="banner__wrap">
+        <div class="banner__wrap banner__wrap--fourth">
           <div class="banner__wrapper">
             <h1 class="banner__header">Digital Marketing</h1>
             <p class="banner__text">Generating your new business through</p>
@@ -577,7 +578,7 @@
             </button>
           </div>
         </div>
-        <div class="banner__wrap">
+        <div class="banner__wrap banner__wrap--fifth">
           <div class="banner__wrapper">
             <h1 class="banner__header">Telecoms Services</h1>
             <p class="banner__text">A new approach to connectivity, see</p>
@@ -586,7 +587,7 @@
             </button>
           </div>
         </div>
-        <div class="banner__wrap">
+        <div class="banner__wrap banner__wrap--sixth">
           <div class="banner__wrapper">
             <h1 class="banner__header">Web Design</h1>
             <p class="banner__text">For businesses looking to make a strong</p>
@@ -595,7 +596,7 @@
             </button>
           </div>
         </div>
-        <div class="banner__wrap">
+        <div class="banner__wrap banner__wrap--seventh">
           <div class="banner__wrapper">
             <h1 class="banner__header">Cyber Security</h1>
             <p class="banner__text">Keeping businesses and their customers</p>
@@ -603,10 +604,11 @@
               Find out more
             </button>
           </div>
-        </div>
-  
-     
+        </div>   
+      </div>
+     <div class="banner-dots"></div>
     </div>
+ 
 
       <!-- OUR SERVICES -->
       <section class="services-sec">
@@ -1201,7 +1203,19 @@
   </div>
 
     <script src="js/jquery.js"></script>
+    <script src="js/slick/slick.min.js"></script>
     <script src="js/app.js"></script>
 
+    <!-- Cookies window -->
+<div class="cookies">
+  <div class="cookies__wrapper">
+    <h2 class="cookies__header">Cookies Policy</h2>
+    <p class="cookies__text">Our website uses cookies. This helps us provide you with a good experience on our website. To see what cookies we use and what they do, and to opt-in on non-essential cookies click "change settings". For a detailed explanation, click on "<a href="" class="cookies__link">Privacy Policy</a>" otherwise click "Accept Cookies" to enter.</p>
+    <div class="cookies__buttons">
+      <button class="cookies__button cookies__button--change"><a href="">Change Settings</a></button>
+      <button class="cookies__button cookies__button--accept"><a href="">Accept Cookies</a></button>
+    </div>
+  </div>
+</div>
   </body>
 </html>

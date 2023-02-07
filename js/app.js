@@ -1,27 +1,23 @@
-// Slick slider
-// $(document).ready(function(){
-//     $('.banner').slick({
-//         autoplay: true,
-//         arrows: false,
-//         dots: true,       
-//         zIndex: -1, 
-//         appendDots: '.banner-dots',
+//Slick slider
+$(document).ready(function(){
+    $('.banner__container').slick({
+        autoplay: true,
+        arrows: false,
+        dots: true,       
+        zIndex: -1, 
+        appendDots: '.banner-dots',
+        dotsClass: 'banner-dots__styling',
+        slidesToShow: 1,
 
-//     });
-//     $('.partners').slick({
-//         autoplay: true,
-//         arrows: false,
-//         dots: false,    
-//         slidesToShow: 5,    
-//     });
-//   });
+    });
+    $('.partners').slick({
+        autoplay: true,
+        arrows: false,
+        dots: false,    
+        slidesToShow: 5,    
+    });
+  });
 
-// $(document).ready(function () {
-//     $('.banner').owlCarousel({
-//         items: 1,
-
-//     }) 
-// });
 
 
  $('#menu-brg').click( function () {
@@ -59,3 +55,24 @@
 //     $('.header').toggleClass('sticky');
 // }
 // });
+
+// STicky header
+
+let previousPosition = 0;
+let scrollPosition = () => window.pageYOffset;
+// console.log(scrollPosition());
+let header = document.querySelector('.header');
+let isItSticky = () => header.classList.contains('sticky');
+
+document.addEventListener('scroll', () => {
+    if (scrollPosition() < previousPosition && !isItSticky()) {
+        header.classList.add('sticky');
+        // console.log('up');
+    }
+    else if (scrollPosition() > previousPosition && isItSticky()){
+        header.classList.remove('sticky');
+        // console.log('down');
+    }
+    previousPosition = scrollPosition();
+
+})

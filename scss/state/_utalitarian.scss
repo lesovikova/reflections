@@ -2,72 +2,60 @@
     display: none;
 }
 
-
-.slick-dots {
-    bottom: 25px;
-}
-
-.slick-dots li button {
-    content: "";
+.banner{
+    width: 100%;
     position: relative;
-    display: inline-block;
-    height: 11px;
-    width: 11px;
-    margin: 0 10px;
-    padding: 0;
-    cursor: pointer;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    height: 550px;
 }
-
-li.slick-active button{
+.banner-dots {
     content: "";
-    position: relative;
-    display: inline-block;
-    height: 11px;
-    width: 11px;
-    margin: 0 10px;
+    // width: 100%;
+    // margin: 0 auto;
+    // height: 30px;
+    position: absolute;
+    left: calc(50% - 120px);
+    bottom: 50px;
+    z-index: 1000;
+    
+}
+.banner-dots__styling {
+    display: flex;
+    margin: 0 auto;
     padding: 0;
-    cursor: pointer;
-    border-radius: 50%;
+    list-style: none;
+    width: fit-content;
+
+    & > li {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 0;
+        cursor: pointer;
+    }
+    & button {
+        height: 11px;
+        width: 11px;
+        font-size: 0;
+        border-radius: 50%;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.5);
+        color: transparent;
+        cursor: pointer;
+    }
+}
+.banner-dots .slick-active button {
+    position: relative;
     background-color: $white;
-
-}
-.slick-dots li.slick-active button:before {
+    &:before {
+        
     content: "";
     position: absolute;
     background-color: transparent;
-    border: 1px solid $white;
+    border: 2px solid $white;
     border-radius: 50%;
     height: 23px;
     width: 23px;
     top: -6px;
     left: -6px;
 }
+    }
 
-.banner-slick {
-    width: 100%;
-    position: relative;
-    height: auto;
-}
-.banner-dots {
-    width: 100%;
-    margin: 0 auto;
-    // height: 30px;
-    position: absolute;
-    left: 0;
-    bottom: 25px;
-}
-// .banner-dots li {
-//     content: "";
-//     position: relative;
-//     display: inline-block;
-//     height: 11px;
-//     width: 11px;
-//     margin: 0 10px;
-//     padding: 0;
-//     cursor: pointer;
-//     border-radius: 50%;
-//     background-color: rgba(255, 255, 255, 0.5);
-
-// }
