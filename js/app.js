@@ -74,5 +74,58 @@ document.addEventListener('scroll', () => {
         // console.log('down');
     }
     previousPosition = scrollPosition();
-
 })
+
+
+//Cookie storage
+
+const cookieStorage = {
+    getItem: (item) => {
+        const cookies = document.cookie
+            .split(';')
+            .map(cookie => cookie.split('='))
+            .reduce((acc, [key, value]) => ({ ...acc, [key.trim()]: value }), {});
+        return cookies[item];
+    },
+    setItem: (item, value) => {
+        document.cookie = `${item}=${value}`;
+    }
+};
+
+const storageType = cookieStorage;
+const acceptedName = 'netmatters_name';
+
+const showModal = () => !storageType.getItem(acceptedName);
+const savedValue = () => storageType.setItem(acceptedName, 'NewName');
+
+
+    const bodyWindow = document.querySelector('body');
+
+window.onload = () => {
+    console.log('loaded');
+
+    const cookieWindow = document.querySelector('.cookies');
+    const cookieAgree = document.querySelector('.cookies__button--accept');
+    const cookieChange = document.querySelector('.cookies__button--change');
+
+    if (showModal(storageType)) {
+        bodyWindow.classList.add('body-cookies');
+        cookieWindow.classList.remove('is-hidden');
+    }
+    
+    cookieAgree.addEventListener('click', () => {
+
+        // savedValue(storageType);
+        // storageType.setItem(acceptedName, 'NewName');
+
+        savedValue(storageType);
+        console.log('click');
+        cookieWindow.classList.add('is-hidden');
+        bodyWindow.classList.remove('body-cookies');
+    });
+    cookieChange.addEventListener('click', () => {
+        
+        cookieWindow.classList.add('is-hidden');
+        bodyWindow.classList.remove('body-cookies');
+    })
+}
