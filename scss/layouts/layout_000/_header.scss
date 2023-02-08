@@ -70,6 +70,7 @@
     }
 }
 .menu-btn {
+    cursor: pointer;
     flex-shrink: 0;
     position: relative;
     background-color: $serviceCol;
